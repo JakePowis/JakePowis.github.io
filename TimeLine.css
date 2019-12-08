@@ -137,6 +137,20 @@
     border-color: transparent black transparent transparent;
   }
 
+    .container2 {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container2::before {
+    left: 60px;
+    border: darkgrey;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+
 /* Make sure all circles are at the same spot */
   .left::after, .right::after {
     left: 15px;

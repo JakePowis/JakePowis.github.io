@@ -10,6 +10,12 @@ h2 {
   font-style: italic;
 }
 
+.img {
+  width: 300px;
+  max-width:100%;
+  height:auto
+}
+
 .title {
 	 text-shadow:
     -1px -1px 0 darkgrey,
@@ -55,14 +61,16 @@ a:active {
   #box-container {
   	background-color: white;
     display: flex;
-    height: 400px;
+    height: 100%;
 
   }
   #box-1 {
     background-color: white;
+    font-size: 1vw;
     width: 60%;
     height: 100%;
-    padding: 15px 80px;
+    padding: 2% 4%;
+    overflow: hidden;
 
   }
 
@@ -70,6 +78,7 @@ a:active {
     background-color: white;
     width: 40%;
     height: 100%;
+    padding: 2% 4%;
     display: flex;
     align-items: center;
   	justify-content: center;
@@ -77,11 +86,11 @@ a:active {
 
     .FAC {
     background-color: white;
-    width: 95%;
+    width: 100%;
     height:90%;
     align-items: center;
   	justify-content: center;
-  	padding: 15px 80px;
+  	padding: 1% 4%;
   	text-align: justify;
 
   }
@@ -90,14 +99,56 @@ a:active {
   	font-weight: bold;
   	color: #FF9F55; 
   	}
-  	
-
-
 
 
   * {
   box-sizing: border-box;
 	}
+
+
+  #grid-container {
+    background-color: white;
+    display: flex;
+    height: 300px;
+    font-size: 0.9vw;
+
+
+  }
+
+  #grid-1 {
+    padding: 2% 1.5%;
+    background-color: orange;
+    margin: 30px 30px;
+    width: 50%;
+    border-radius: 20px;
+   
+  }
+
+    #grid-2 {
+    padding: 2% 1.5%;
+    background-color: orange;
+    margin: 30px 30px;
+    width: 50%;
+    border-radius: 20px;
+
+}
+
+  #grid-3 {
+    padding: 2% 1.5%;
+    background-color: orange;
+    margin: 30px 30px;
+    width: 50%;
+    border-radius: 20px;
+  }
+
+  #grid-4 {
+    padding: 2% 1.5%;
+    background-color: orange;
+    margin: 30px 30px;
+    width: 50%;
+    border-radius: 20px;
+  }
+
 
 
 
