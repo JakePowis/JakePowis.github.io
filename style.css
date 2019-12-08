@@ -1,0 +1,105 @@
+<style>
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: white;
+  } 
+
+h2 {
+  color: black;
+  font-style: italic;
+}
+
+.title {
+	 text-shadow:
+    -1px -1px 0 darkgrey,
+    1px -1px 0 darkgrey,
+    -1px 1px 0 darkgrey,
+    1px 1px 0 darkgrey;  
+}
+
+ul li {
+    padding: 4px 0px;
+}
+
+.stars {
+  background-image: url('https://image.freepik.com/free-photo/modern-structured-wall-background_23-2148369481.jpg'); 
+  color: white;
+}
+
+/* not currently used */
+.wall {
+  background-image: url('https://image.freepik.com/free-photo/dirty-pattern-paint-room-block_1203-5709.jpg'); 
+  color: white;
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+/* visited link */
+a:visited {
+  color: white;
+}
+/* mouse over link */
+a:hover {
+  color: lightgrey;
+}
+/* selected link */
+a:active {
+  color: lightgrey;
+}
+
+
+
+  #box-container {
+  	background-color: white;
+    display: flex;
+    height: 400px;
+
+  }
+  #box-1 {
+    background-color: white;
+    width: 60%;
+    height: 100%;
+    padding: 15px 80px;
+
+  }
+
+  #box-2 {
+    background-color: white;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  	justify-content: center;
+  }
+
+    .FAC {
+    background-color: white;
+    width: 95%;
+    height:90%;
+    align-items: center;
+  	justify-content: center;
+  	padding: 15px 80px;
+  	text-align: justify;
+
+  }
+
+  	.highlight{
+  	font-weight: bold;
+  	color: #FF9F55; 
+  	}
+  	
+
+
+
+
+  * {
+  box-sizing: border-box;
+	}
+
+
+
+
+</style>
