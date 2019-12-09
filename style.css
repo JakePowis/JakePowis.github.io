@@ -1,7 +1,7 @@
 <style>
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "Calibri", sans-serif;
   background-color: white;
   } 
 
@@ -10,13 +10,16 @@ h2 {
   font-style: italic;
 }
 
-.img {
-  width: 300px;
+/* image of me */
+.img1 {
   max-width:100%;
-  height:auto
+  height:auto;
+  width: 300px;
 }
 
+/* Page Title */
 .title {
+  font-family:"Helvetica Bold", sans-serif;
 	 text-shadow:
     -1px -1px 0 darkgrey,
     1px -1px 0 darkgrey,
@@ -24,10 +27,13 @@ h2 {
     1px 1px 0 darkgrey;  
 }
 
+/* Unordered Lists*/
 ul li {
     padding: 4px 0px;
 }
 
+
+/* Picture page break */
 .stars {
   background-image: url('https://image.freepik.com/free-photo/modern-structured-wall-background_23-2148369481.jpg'); 
   color: white;
@@ -56,7 +62,7 @@ a:active {
   color: lightgrey;
 }
 
-
+/* Flex boxes for intro section to get picture to the right*/
 
   #box-container {
   	background-color: white;
@@ -64,9 +70,11 @@ a:active {
     height: 100%;
 
   }
+
+  /* box that holds intro text*/
   #box-1 {
     background-color: white;
-    font-size: 1vw;
+    font-size: 1.1vw;
     width: 60%;
     height: 100%;
     padding: 2% 4%;
@@ -74,6 +82,7 @@ a:active {
 
   }
 
+/* box that holds picture*/
   #box-2 {
     background-color: white;
     width: 40%;
@@ -84,7 +93,8 @@ a:active {
   	justify-content: center;
   }
 
-    .FAC {
+/* generic boxes for content*/
+    .textContent {
     background-color: white;
     width: 100%;
     height:90%;
@@ -95,6 +105,7 @@ a:active {
 
   }
 
+/* Orange text highlight*/
   	.highlight{
   	font-weight: bold;
   	color: #FF9F55; 
@@ -105,52 +116,23 @@ a:active {
   box-sizing: border-box;
 	}
 
-
+/* boxes at bottom for start up ideas container*/
   #grid-container {
     background-color: white;
     display: flex;
-    height: 300px;
+    height: 100%;
     font-size: 0.9vw;
-
-
   }
-
-  #grid-1 {
+  
+/* the actual boxes in a group*/
+  #grid-1, #grid-2, #grid-3, #grid-4 {
     padding: 2% 1.5%;
     background-color: orange;
     margin: 30px 30px;
     width: 50%;
     border-radius: 20px;
+    border: 4px solid black;
    
   }
-
-    #grid-2 {
-    padding: 2% 1.5%;
-    background-color: orange;
-    margin: 30px 30px;
-    width: 50%;
-    border-radius: 20px;
-
-}
-
-  #grid-3 {
-    padding: 2% 1.5%;
-    background-color: orange;
-    margin: 30px 30px;
-    width: 50%;
-    border-radius: 20px;
-  }
-
-  #grid-4 {
-    padding: 2% 1.5%;
-    background-color: orange;
-    margin: 30px 30px;
-    width: 50%;
-    border-radius: 20px;
-  }
-
-
-
-
 
 </style>
