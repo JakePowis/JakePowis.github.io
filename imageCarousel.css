@@ -33,6 +33,7 @@
 	bottom: 4%;
 	right: 4%;
 	z-index: 100;
+	opacity: 0.6;
 }
 
 #prevBtn {
@@ -41,6 +42,7 @@
 	bottom: 4%;
 	left: 4%;
 	z-index: 100;
+	opacity: 0.6;
 }
 
 img.resize {
@@ -69,6 +71,40 @@ img.resize {
 	/* the image */
 	.carousel-slide {
 		height: 340px;
+		width: auto;
+		position: absolute;
+
+
+	}
+
+
+
+}
+
+/* ##########################################################################################################################*/
+
+
+
+/* Media queries - Responsive timeline on screens less than 400px wide */
+@media screen and (max-width: 400px) {
+
+
+
+	.carousel-container {
+		width: 250px;
+		height: 250px;
+		border: 4px solid black;
+		margin: 2% 10% 2% 0%;
+
+		position: relative;
+		font-size: 35px;
+
+
+	}
+
+	/* the image */
+	.carousel-slide {
+		height: 250px;
 		width: auto;
 		position: absolute;
 

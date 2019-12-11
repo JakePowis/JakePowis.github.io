@@ -72,7 +72,12 @@ body {
 	font-size: inherit;
 }
 
+#icon1 {
 
+width: 45px;
+height: 45px;
+
+}
 
 
 .space {
@@ -169,7 +174,7 @@ body {
 .textBox1 {
 
 	height: 100%;
-	width: 80%;
+	width: 100%;
 	display: flex;
 	background-color: white;
 	z-index: 80;
@@ -206,10 +211,10 @@ body {
 	display: grid;
 	background-color: white;
 	z-index: 80;
-	opacity: 0.92;
+	opacity: 0.9;
 	border-radius: 30px;
 	padding: 2% 4% 2% 2%;
-	margin: 4% 4% 4% 4%;
+	margin: 6% 6% 10% 6%;
 	text-align: left;
 	grid-template-columns: 2.5fr 2fr;
 }
@@ -221,7 +226,7 @@ body {
 .textBox4 {
 
 	height: 100%;
-	width: 90%;
+	width: 100%;
 	display: flex;
 	background-color: white;
 	z-index: 80;
@@ -346,6 +351,10 @@ ul li {
 
 }
 
+#top {
+	font-size: 20px;
+}
+
 
 .changeTheme {
 
@@ -384,6 +393,7 @@ ul li {
 .textBox1 {
 
 	font-size: 14px;
+	margin: 4% 8% 10% 8%;
 }
 
 .textBox2 {
@@ -470,6 +480,117 @@ ul li {
     text-align: center;
  
 }
+
+
+/* ##########################################################################################################################*/
+
+
+
+/* ##########################################################################################################################*/
+
+
+
+/* Media queries - Responsive timeline on screens less than 450px wide */
+@media screen and (max-width: 450px) {
+
+
+.sectionContainer {
+
+
+	margin: 0.2% 0% 1% 0%;
+	height: 100%;
+	width: 100% auto;
+	border-radius: 2px;
+
+	padding: 0% 0% 0% 0%;
+
+}
+
+
+.textBox1 {
+
+	margin: 10% 3% 12% 3%;
+	width: 100%;
+	font-size: 12px;
+
+
+}
+
+.textBox2 {
+
+	margin: 3% 3% 3% 3%;
+	width: 100%;
+
+
+
+
+}
+
+
+
+.textBox3 {
+
+	margin: 2% 2% 2% 2%;
+	width: 100%;
+	padding: 4% 6%;
+
+}
+
+
+
+
+.textBox4 {
+
+	margin: 5% 3% 5% 3%;
+	width: 100%;
+	padding: 4% 4% 4% 0%;
+
+
+
+}
+
+.icon {
+	font-size: 24px;
+	padding: 6% 6% 6% 6%;
+
+}
+
+.link {
+	font-size: 8px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+}
+
+.name {
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 0% 0% 0% 4%
+}
+
+#icon1 {
+
+width: 30px;
+height: 30px
+}
+
+.footer {
+
+    font-size: 8px;
+    text-align: center;
+
+}
+
+#top {
+	font-size: 18px;
+
+}
+
+
+
 
 
 /* ##########################################################################################################################*/
