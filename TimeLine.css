@@ -18,14 +18,16 @@
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  z-index: 1;
 }
 
 /* Container around content */
 .container {
   padding: 10px 40px;
   position: relative;
-  background-color: inherit;
+  background-color: red;
   width: 50%;
+
 }
 
 /* The circles on the timeline */
@@ -39,7 +41,7 @@
   border: 4px solid black;
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 30;
 }
 
 /* last circle only */
@@ -48,6 +50,7 @@
   position: relative;
   background-color: inherit;
   width: 50%;
+  z-index: 30;
 }
 
 /* last circle only*/
@@ -61,17 +64,17 @@
   border: 4px solid black;
   top: 10px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 30;
 }
 
 /* Place the container to the left */
 .left {
-  left: 0;
+  left: 0%;
 }
 
 /* Place the container to the right */
 .right {
-  left: 50%;
+  left: 36.25%;
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -113,11 +116,17 @@
   background-color: darkgrey;
   position: relative;
   border-radius: 6px;
+  font-size: 12px;
+  opacity: 0.95;
 }
 
+
+
+
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-/* Place the timelime to the left */
+@media screen and (max-width: 800px) {
+/* Place the timelime to the left - where time line is */
   .timeline::after {
     left: 31px;
   }
@@ -134,7 +143,7 @@
     left: 60px;
     border: darkgrey;
     border-width: 10px 10px 10px 0;
-    border-color: transparent black transparent transparent;
+    border-color: transparent;
   }
 
     .container2 {
@@ -158,6 +167,6 @@
 
 /* Make all right containers behave like the left ones */
   .right {
-    left: 0%;
+    left: -14%;
   }
 }

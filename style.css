@@ -1,138 +1,475 @@
-<style>
+* {
+box-sizing: border-box;
+
+}
 
 body {
-  font-family: "Calibri", sans-serif;
-  background-color: white;
-  } 
 
-h2 {
-  color: black;
-  font-style: italic;
+	background-color: darkgrey;
+	font-family: 'Lato', sans-serif;
 }
 
-/* image of me */
-.img1 {
-  max-width:100%;
-  height:auto;
-  width: 300px;
+
+.headerWrapper {
+
+    position: fixed;
+    background-color: white;
+    color: black;
+    display: grid;
+    grid-template-columns: 0.7fr 2.7fr 1.7fr 2fr 2fr 2fr 2fr 1.5fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "icon name space link link link space icon icon icon icon";
+    padding: 0px;
+    height: 70px;
+    width: 100%;
+    font-size: 30px;
+    left:0;
+    top: 0;
+    opacity: 0.9;
+    z-index: 100;
+    border-bottom: 2px solid orange;
+ }
+
+ .headerItems {
+ 	display:flex;
+ 	flex-direction: column;
+ 	align-items: center;
+	justify-content: center;
+	max-height: 100%;
+	background-color: inherit;
+ }
+
+
+.name {
+	grid-area: "name";
+	background-color: inherit;
+	text-align: left;
+	font-size: 32px;
+	height: 68px;
+	padding: 0% 0%;
+	display: flex;
+   	align-items: center;
+
+
+
 }
 
-/* Page Title */
-.title {
-  font-family:"Helvetica Bold", sans-serif;
-	 text-shadow:
-    -1px -1px 0 darkgrey,
-    1px -1px 0 darkgrey,
-    -1px 1px 0 darkgrey,
-    1px 1px 0 darkgrey;  
+
+.name:hover {
+	color:orange;
 }
 
-/* Unordered Lists*/
+.name:link {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+
+}
+
+.name:visited {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+	font-size: inherit;
+}
+
+
+
+
+.space {
+	grid-area: "space";
+	background-color: inherit;
+	display:flex;
+ 	align-items: center;
+	justify-content: center;
+}
+
+.link {
+	grid-area: "link";
+	background-color: inherit;
+	height: 68px;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3% 2% 2% 2%;
+	text-decoration: none;
+	margin: 0% 0%;
+}
+
+.link:link {
+	background-color: inherit;
+	color: black;
+	text-decoration: none;
+
+}
+
+.link:visited {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+}
+
+.link:hover {
+	background-color: orange;
+	color: white;
+}
+
+
+.icon {
+	grid-area: "icon";
+	font-size: 40px;
+	background-color: inherit;
+	align-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2% 2%;
+
+}
+
+.icon:link {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+
+}
+
+.icon:visited {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+	font-size: inherit;
+}
+
+.icon:hover {
+	color: orange;
+}
+
+ .headerBox {
+    height: 60px;
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+
+
+.sectionContainer {
+
+	background-color: white;
+	margin: 2% 2% 2% 2%;
+	height: 100%;
+	width: 90% auto;
+	border-radius: 100px;
+	text-align: center;
+	padding: 2% 2% 2% 2%;
+	position: relative;
+}
+
+.textBox1 {
+
+	height: 100%;
+	width: 80%;
+	display: flex;
+	background-color: white;
+	z-index: 80;
+	opacity: 0.85;
+	border-radius: 30px;
+	padding: 2% 2% 3% 2%;
+	margin: 8% 10% 14% 10%;
+	flex-direction: column;
+
+
+
+}
+
+.textBox2 {
+
+	height: 100%;
+	width: 100%;
+	display: flex;
+	background-color: white;
+	z-index: 80;
+	opacity: 0.9;
+	border-radius: 30px;
+	padding: 2% 2% 3% 2%;
+	margin: 6% 10% 4% 10%;
+	flex-direction: column;
+
+
+}
+
+.textBox3 {
+
+	height: 100%;
+	width: 100%;
+	display: grid;
+	background-color: white;
+	z-index: 80;
+	opacity: 0.92;
+	border-radius: 30px;
+	padding: 2% 4% 2% 2%;
+	margin: 4% 4% 4% 4%;
+	text-align: left;
+	grid-template-columns: 2.5fr 2fr;
+}
+
+
+
+
+
+.textBox4 {
+
+	height: 100%;
+	width: 90%;
+	display: flex;
+	background-color: white;
+	z-index: 80;
+	opacity: 0.92;
+	border-radius: 30px;
+	padding: 2% 2% 2% 2%;
+	margin: 4% 4% 4% 4%;
+	flex-direction: column;
+	text-align: left;
+
+}
+
+.right {
+
+	margin: 6% 2% 2% 14%;
+	opacity: 1;
+	z-index: 100;
+}
+
+.background1 {
+
+	    background-image: url("./images/image3.jpg");
+	    display: flex;
+	    position: relative;
+        background-size: cover; 
+}
+
+.background2 {
+
+	    background-image: url("./images/image4.jpg");
+	    display: flex;
+	    position: relative;
+        background-size: cover; 
+}
+
+.background3 {
+
+	    background-image: url("./images/image2.jpg");
+	    display: flex;
+	    position: relative;
+        background-size: cover; 
+}
+
+.background4 {
+
+	    background-image: url("./images/image1.jpg");
+	    display: flex;
+	    position: relative;
+        background-size: cover; 
+}
+
+ .highlight{
+
+	  	font-weight: bold;
+	  	color: #FF9F55; 
+
+  	}
+
+
 ul li {
     padding: 4px 0px;
 }
 
-
-/* Picture page break */
-.stars {
-  background-image: url('https://image.freepik.com/free-photo/modern-structured-wall-background_23-2148369481.jpg'); 
-  color: white;
-}
-
-/* not currently used */
-.wall {
-  background-image: url('https://image.freepik.com/free-photo/dirty-pattern-paint-room-block_1203-5709.jpg'); 
-  color: white;
-}
-
-/* unvisited link */
-a:link {
-  color: white;
-}
-/* visited link */
-a:visited {
-  color: white;
-}
-/* mouse over link */
-a:hover {
-  color: lightgrey;
-}
-/* selected link */
-a:active {
-  color: lightgrey;
-}
-
-/* Flex boxes for intro section to get picture to the right*/
-
-  #box-container {
-  	background-color: white;
-    display: flex;
-    height: 100%;
-
-  }
-
-  /* box that holds intro text*/
-  #box-1 {
-    background-color: white;
-    font-size: 1.1vw;
-    width: 60%;
-    height: 100%;
-    padding: 2% 4%;
-    overflow: hidden;
-
-  }
-
-/* box that holds picture*/
-  #box-2 {
-    background-color: white;
-    width: 40%;
-    height: 100%;
-    padding: 2% 4%;
-    display: flex;
-    align-items: center;
-  	justify-content: center;
-  }
-
-/* generic boxes for content*/
-    .textContent {
-    background-color: white;
-    width: 100%;
-    height:90%;
-    align-items: center;
-  	justify-content: center;
-  	padding: 1% 4%;
-  	text-align: justify;
-
-  }
-
-/* Orange text highlight*/
-  	.highlight{
-  	font-weight: bold;
-  	color: #FF9F55; 
-  	}
-
-
-  * {
-  box-sizing: border-box;
-	}
 
 /* boxes at bottom for start up ideas container*/
   #grid-container {
     background-color: white;
     display: flex;
     height: 100%;
-    font-size: 0.9vw;
+    font-size: 14px;
+    flex-direction: row;
   }
   
 /* the actual boxes in a group*/
   #grid-1, #grid-2, #grid-3, #grid-4 {
     padding: 2% 1.5%;
-    background-color: orange;
-    margin: 30px 30px;
-    width: 50%;
+    background-color: darkgrey;
+    margin: 15px 15px;
+    width: 100%;
     border-radius: 20px;
     border: 4px solid black;
    
   }
 
-</style>
+
+
+
+
+
+.footer {
+
+    background-color: white;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr 4fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-areas: "space top space name space theme space email space";
+    padding: 0px;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    opacity: 0.9;
+    z-index: 100;
+    border-top: 2px solid orange;
+    align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+    right: 0;
+}
+
+.footer:link {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+
+}
+
+.footer:visited {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+
+}
+
+
+.changeTheme {
+
+	background-color: inherit;
+	color: inherit;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2% 2% 2% 2%;
+
+
+}
+
+.changeTheme:hover {
+
+	background-color: navy;
+	color: white;
+	border-radius: 10px;
+
+}
+
+
+
+
+/* ##########################################################################################################################*/
+
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 1000px) {
+
+/* CODE TO MAKE IMAGE APPEAR BELOW TEXT ON SMALL SCREEN */
+
+
+.textBox1 {
+
+	font-size: 14px;
+}
+
+.textBox2 {
+
+
+	padding: 2% 2% 3% 2%;
+	margin: 6% 6% 6% 6%;
+
+
+}
+
+
+
+.textBox3 {
+
+	height: 100%;
+	width: 100%;
+	display: flex;
+	background-color: white;
+	z-index: 80;
+	opacity: 0.9;
+	border-radius: 30px;
+	padding: 4% 4% 3% 4%;
+	margin: 8% 7% 6% 7%;
+	flex-direction: column;
+	font-size: 12px;
+	text-align: justify;
+	align-items: center;
+
+}
+
+
+.right {
+
+	margin: 6% 2% 2% 2%;
+	opacity: 0.99;
+	z-index: 100;
+}
+
+
+.icon {
+	font-size: 28px;
+
+}
+
+.link {
+	font-size: 11px;
+	align-items: center;
+	text-align: center;
+
+}
+
+.name {
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	padding: 0% 0% 0% 0%;
+
+
+}
+
+
+
+.textBox4 {
+
+	padding: 2% 4% 3% 0%;
+	margin: 8% 6% 6% 6%;
+	font-size: 12px;
+}
+
+
+  #grid-container {
+    flex-direction: column;
+    font-size: 12px;
+    align-items: center;
+    margin: 15px 18px 15px 0px;
+  }
+
+
+.footer {
+
+    font-size: 10px;
+    text-align: center;
+ 
+}
+
+
+/* ##########################################################################################################################*/

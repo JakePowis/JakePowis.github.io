@@ -3,8 +3,13 @@
 .carousel-container {
 	width: 410px;
 	margin: auto;
-	border: 6px solid black;
+	border: 4px solid black;
 	overflow: hidden;
+	border-radius: 8px;
+	position: relative;
+	font-size: 40px;
+	color: orange;
+    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
 
 }
 
@@ -16,20 +21,60 @@
 }
 
 
+/* Add media query to resize carousel for mobile*/
+
+
+
 /* next and previous buttons*/
-#nextBtn, #prevBtn {
-	box-shadow: 0px 1px 0px 0px #1c1b18;
-	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
-	background-color:#eae0c2;
-	border-radius:15px;
-	border:2px solid #333029;
-	display:inline-block;
-	cursor:pointer;
-	color:#505739;
-	font-family:Arial;
-	font-size:14px;
-	font-weight:bold;
-	padding:12px 16px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
+#nextBtn {
+
+
+	position: absolute;
+	bottom: 4%;
+	right: 4%;
+	z-index: 100;
+}
+
+#prevBtn {
+	
+	position: absolute;
+	bottom: 4%;
+	left: 4%;
+	z-index: 100;
+}
+
+img.resize {
+  width:410px;
+  height:410px;
+}
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 800px) {
+
+/* CODE TO MAKE IMAGE APPEAR BELOW TEXT ON SMALL SCREEN */
+
+	.carousel-container {
+		width: 340px;
+		height: 340px;
+		border: 4px solid black;
+		margin: 2% 10% 2% 0%;
+
+		position: relative;
+		font-size: 35px;
+
+
+	}
+
+	/* the image */
+	.carousel-slide {
+		height: 340px;
+		width: auto;
+		position: absolute;
+
+
+	}
+
+
+
 }

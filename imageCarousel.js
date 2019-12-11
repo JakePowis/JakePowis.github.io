@@ -62,6 +62,15 @@ carouselSlide.addEventListener("transitionend",()=>{ // if first slide (at end),
 
 
 
+document.addEventListener('keypress',()=>{
+	if(counter >= carouselImages.length-1) return; // in case of counter not resetting
+	carouselSlide.style.transition = "transform 0.6s ease-in-out";
+	counter++; // add one to counter on click
+	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above - NOT WORKING
+
+})
+
+
 
 
 
