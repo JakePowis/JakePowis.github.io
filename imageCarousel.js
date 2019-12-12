@@ -1,3 +1,10 @@
+
+//NORMAL CAROUSEL
+
+
+//################################################################################
+
+
 const carouselSlide = document.querySelector(".carousel-slide") // the slide
 const carouselImages = document.querySelectorAll(".carousel-slide img"); // the images
 
@@ -73,5 +80,55 @@ document.addEventListener('keypress',()=>{
 
 
 
+//#######################################################
 
 
+//AUTOPLAY
+
+let autoPlay = false;
+
+const autoButton = document.querySelector("#autoPlay");
+
+autoButton.addEventListener('click',()=>{
+	if (autoPlay == false) autoPlay = true; // sets to true on first click
+	else autoPlay = false; // then sets to false
+	autoPlaySlide(); // runs autoplay function on click
+	changeAutoText(); // runs change text function on click
+
+         
+});//end func
+
+
+function changeAutoText() { // experimenting with changing style direct via DOM, rather than adding/removing classes (as in Theme Changer)
+  var autoText = document.querySelector("#autoPlay"); // grabs text
+  if (autoText.innerHTML == "Autoplay: Off") { //changes text to "on" if "off"
+    autoText.innerHTML = "Autoplay: <b>On<b>";
+	autoText.style.color = "black";
+	autoText.style.opacity = 1;
+	autoText.style.background = "lightgrey";
+
+  } else {
+    autoText.innerHTML = "Autoplay: Off"; //changes text to "off" if "on"
+    autoText.style.color = "darkgrey";
+    autoText.style.opacity = 0.7;
+    autoText.style.background = "inherit";
+  }
+}
+
+
+
+function autoPlaySlide() {
+	if(autoPlay == true){
+		carouselSlide.style.transition = "transform 0.6s ease-in-out";
+		counter++; // add one to counter on click
+		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+		setTimeout(autoPlaySlide, 3000);} // keep looping the function every 3 secs untill autoPlay is no longer true
+	else return; // breaks out of recurrsive loop once autoplay de-selected
+}//end func
+
+
+
+
+
+
+		
