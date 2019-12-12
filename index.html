@@ -5,6 +5,7 @@
 
 	<head>
 	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <link rel="stylesheet" type="text/css" href="theme2.css">
 	    <link rel="stylesheet" type="text/css" href="TimeLine.css">
 	    <link rel="stylesheet" type="text/css" href="imageCarousel.css">
 		<script src="https://kit.fontawesome.com/ff96e1ebd9.js" crossorigin="anonymous"></script>
@@ -22,7 +23,7 @@
 
 	<header>
 		<a name="top"></a>
-		<div class="headerWrapper">
+		<div class="headerWrapper" id="header">
 			<div class="headerItems"><img src="./Images/icon.png" alt="site icon" id="icon1"></div>
 			<a href="mailto:jakepowis@gmail.com?Subject=FAC%20Application" class="name"> <div class="name">Jake Powis</div></a>
 			<div class="space"></div>
@@ -40,7 +41,7 @@
 	</header>
 
 	<section> 
-		<div class="sectionContainer background1"> 
+		<div class="sectionContainer background1" id="background1"> 
 			<div class="textBox1">
 			
 						<h2> My Application to the FAC Spring 2020 Cohort </h2> 
@@ -59,7 +60,7 @@
 
 
 		<section> 
-		<div class="sectionContainer background2"> 
+		<div class="sectionContainer background2" id="background2"> 
 			<div class="textBox2">
 			
 			<div>
@@ -110,7 +111,7 @@
 
 	<section>
 		<a name="me"></a>
-		<div class="sectionContainer background3" > 
+		<div class="sectionContainer background3"id="background3">
 					<div class="textBox3">
 						<div class="left">
 				
@@ -134,11 +135,11 @@
 
 						         </div>
 						         	        <div align="center">
-						         	        <i class="fas fa-chevron-left" id="prevBtn"></i>
-						         	        <i class="fas fa-chevron-right" id="nextBtn"></i>
+						         	        <i class="fas fa-chevron-left" id="prevBtn" style="cursor:pointer"></i>
+						         	        <i class="fas fa-chevron-right" id="nextBtn" style="cursor:pointer"></i>
 								         	</div>
 						    </div>
-						    <p align="center"><i>Autoplay: <b>Off</b></i></p>
+						    <p align="center"><i><span style="cursor:pointer">Autoplay: <b>Off</b></i></span></p>
 			
 	         <br/>
 
@@ -159,7 +160,7 @@
 	<section>
 
 		<a name="FAC"></a> 
-				<div class="sectionContainer background4" > 
+				<div class="sectionContainer background4" id="background4"> 
 					<div class="textBox4">
 					
 					<h2 align="center"> Why FAC</h2> 
@@ -205,16 +206,18 @@
 
 
 	<footer>
-		<div class="footer">
+		<div class="footer" id="footer">
 			<div></div>
-			<a href="#top" class="icon"><div class="icon" id="top"><i class="fas fa-arrow-circle-up"></i>TOP</div></a>
+			<a href="#top" class="icon"><div class="topIcon"><i class="fas fa-arrow-circle-up"></i>TOP</div></a>
 			<div></div>
 			<div><i>Designed & Built by Jake Powis, 2020</i></div>
 			<div></div>
-			<div class="changeTheme">Change Theme</div>
+			<div class="changeTheme" id="changeTheme" style="cursor:pointer">Change Theme</div>
 			<div></div>
 			<a href="mailto:jakepowis@gmail.com?Subject=FAC%20Application" class="icon"><div class="icon" style="font-size: 30px"><i class="far fa-envelope"></i></div></a>
 			<div></div>
+
+			<script type = "text/javascript" src="changeTheme.js"></script>
 
 
 

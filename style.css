@@ -195,7 +195,7 @@ height: 45px;
 	display: flex;
 	background-color: white;
 	z-index: 80;
-	opacity: 0.9;
+	opacity: 0.90;
 	border-radius: 30px;
 	padding: 2% 2% 3% 2%;
 	margin: 6% 10% 4% 10%;
@@ -211,7 +211,7 @@ height: 45px;
 	display: grid;
 	background-color: white;
 	z-index: 80;
-	opacity: 0.9;
+	opacity: 0.85;
 	border-radius: 30px;
 	padding: 2% 4% 2% 2%;
 	margin: 6% 6% 10% 6%;
@@ -230,7 +230,7 @@ height: 45px;
 	display: flex;
 	background-color: white;
 	z-index: 80;
-	opacity: 0.92;
+	opacity: 0.85;
 	border-radius: 30px;
 	padding: 2% 2% 2% 2%;
 	margin: 4% 4% 4% 4%;
@@ -351,17 +351,43 @@ ul li {
 
 }
 
-#top {
+.topIcon {
 	font-size: 20px;
+	background-color: inherit;
+	align-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2% 2%;
+}
+
+.topIcon:link {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+
+}
+
+.topIcon:visited {
+	background-color: inherit;
+	color: inherit;
+	text-decoration: none;
+	font-size: inherit;
+}
+
+.topIcon:hover {
+	color: orange;
+
 }
 
 
 .changeTheme {
 
-	background-color: inherit;
-	color: inherit;
+	background-color: orange;
+	color: white;
 	font-weight: bold;
 	display: flex;
+	border-radius: 10px;
 	align-items: center;
 	justify-content: center;
 	padding: 2% 2% 2% 2%;
@@ -371,9 +397,8 @@ ul li {
 
 .changeTheme:hover {
 
-	background-color: navy;
-	color: white;
-	border-radius: 10px;
+	color: darkslategrey;
+
 
 }
 
@@ -584,7 +609,7 @@ height: 30px
 
 }
 
-#top {
+.topIcon {
 	font-size: 18px;
 
 }
