@@ -111,6 +111,7 @@
   border: medium solid darkgrey;
   border-width: 10px 10px 10px 0;
   border-color: transparent darkgrey transparent transparent;
+
 }
 
 /* Fix the circle for containers on the right side */
@@ -125,7 +126,7 @@
   position: relative;
   border-radius: 6px;
   opacity: 0.95;
-  font-size: 14px;
+  font-size: 14px;}
 
 
 
