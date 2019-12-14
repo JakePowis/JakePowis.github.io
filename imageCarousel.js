@@ -10,6 +10,7 @@ const carouselImages = document.querySelectorAll(".carousel-slide img"); // the 
 
 //counter
 let counter = 1;
+let size = "";
 
 
 
@@ -20,8 +21,7 @@ const nextButton = document.querySelector("#nextBtn");
 
 //Calculate Carousel Size
 
-let size = carouselSlide.clientWidth;
-
+updateValues();
 carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; 
 
 //for resize
