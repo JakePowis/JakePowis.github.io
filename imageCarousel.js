@@ -8,6 +8,9 @@
 const carouselSlide = document.querySelector(".carousel-slide") // the slide
 const carouselImages = document.querySelectorAll(".carousel-slide img"); // the images
 
+//counter
+let counter = 1;
+
 
 
 //Buttons
@@ -15,11 +18,22 @@ const prevButton = document.querySelector("#prevBtn");
 const nextButton = document.querySelector("#nextBtn");
 
 
-//counter
-let counter = 1;
-const size = carouselSlide.clientWidth; // get width of image so we know how much to move them along
+//Calculate Carousel Size
 
-carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move the starting positon on by "size" pixels 
+let size = carouselSlide.clientWidth;
+
+carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; 
+
+//for resize
+
+function updateValues() 
+	{size = carouselImages[0].clientWidth;}
+
+window.addEventListener("resize", ()=>{
+		updateValues();
+		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; 
+		
+})
 
 
 
@@ -32,7 +46,8 @@ nextButton.addEventListener('click',()=>{
 	if(counter >= carouselImages.length-1) return; // in case of counter not resetting
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
 	counter++; // add one to counter on click
-	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above - NOT WORKING
+	updateValues();
+	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
 
 })
 
@@ -41,7 +56,8 @@ prevButton.addEventListener('click',()=>{
 	if(counter <= 0) return; // in case of counter not restting
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
 	counter--; // add one to counter on click
-	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above - NOT WORKING
+	updateValues();
+	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
 
 })
 
@@ -51,6 +67,7 @@ carouselSlide.addEventListener("transitionend",()=>{ // if last slide (at start)
 	if (carouselImages[counter].id === "last-clone") {
 	carouselSlide.style.transition = "none";
 	counter = carouselImages.length - 2; //reset count
+	updateValues();
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
 	}
 
@@ -62,6 +79,7 @@ carouselSlide.addEventListener("transitionend",()=>{ // if first slide (at end),
 	if (carouselImages[counter].id === "first-clone") {
 	carouselSlide.style.transition = "none";
 	counter = carouselImages.length - counter; //reset count
+	updateValues();
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
 	}
 
@@ -73,6 +91,7 @@ document.addEventListener('keypress',()=>{
 	if(counter >= carouselImages.length-1) return; // in case of counter not resetting
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
 	counter++; // add one to counter on click
+	updateValues();
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above - NOT WORKING
 
 })
@@ -121,6 +140,7 @@ function autoPlaySlide() {
 	if(autoPlay == true){
 		carouselSlide.style.transition = "transform 0.6s ease-in-out";
 		counter++; // add one to counter on click
+		updateValues();
 		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
 		setTimeout(autoPlaySlide, 3000);} // keep looping the function every 3 secs untill autoPlay is no longer true
 	else return; // breaks out of recurrsive loop once autoplay de-selected

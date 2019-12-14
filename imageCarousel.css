@@ -56,6 +56,12 @@ img.resize {
 
 /* CODE TO MAKE IMAGE APPEAR BELOW TEXT ON SMALL SCREEN */
 
+
+		img.resize {
+  		width:340px;
+  		height:340px;
+	}
+
 	.carousel-container {
 		width: 340px;
 		height: 340px;
@@ -76,6 +82,9 @@ img.resize {
 
 
 	}
+
+
+
 
 
 
