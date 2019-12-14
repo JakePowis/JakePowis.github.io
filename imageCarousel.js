@@ -17,7 +17,7 @@ const nextButton = document.querySelector("#nextBtn");
 
 //counter
 let counter = 1;
-const size = carouselImages[0].clientWidth; // get width of image so we know how much to move them along
+const size = carouselSlide.clientWidth; // get width of image so we know how much to move them along
 
 carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move the starting positon on by "size" pixels 
 
