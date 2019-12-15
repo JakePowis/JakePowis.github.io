@@ -142,7 +142,7 @@ function autoPlaySlide() {
 		counter++; // add one to counter on click
 		updateValues();
 		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
-		setTimeout(autoPlaySlide, 3000);} // keep looping the function every 3 secs untill autoPlay is no longer true
+		setTimeout(autoPlaySlide, 2500);} // keep looping the function every 3 secs untill autoPlay is no longer true
 	else return; // breaks out of recurrsive loop once autoplay de-selected
 }//end func
 
