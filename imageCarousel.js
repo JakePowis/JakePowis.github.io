@@ -31,6 +31,7 @@ function updateValues()
 
 window.addEventListener("resize", ()=>{
 		updateValues();
+		carouselSlide.style.transition = "none";
 		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; 
 		
 })
