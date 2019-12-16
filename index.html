@@ -8,6 +8,7 @@
 	    <link rel="stylesheet" type="text/css" href="theme2.css">
 	    <link rel="stylesheet" type="text/css" href="TimeLine.css">
 	    <link rel="stylesheet" type="text/css" href="imageCarousel.css">
+	    <link rel="stylesheet" type="text/css" href="addtionalFeatures.css">
 		<script src="https://kit.fontawesome.com/ff96e1ebd9.js" crossorigin="anonymous"></script>
 		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -27,20 +28,21 @@
 
 
 	<header>
-		
+		<script type = "text/javascript" src="addtionalFeatures.js"></script>
+
 		<div class="headerWrapper" id="header">
 			<div class="headerItems"><img src="./Images/icon.png" alt="site icon" id="icon1"></div>
-			<a href="mailto:jakepowis@gmail.com?Subject=FAC%20Application" class="name"> <div class="name">Jake Powis</div></a>
+			<div class="popup" onclick="popup()"><span class="name">&nbsp;Jake Powis</span><span class="popuptext" id="popuptext">Thank you for checking out my website! Please <a href="mailto:jakepowis@gmail.com?Subject=FAC%20Application" class="highlight">click here</a> if you would like to contact me directly &nbsp; <i class="fas fa-paper-plane"></i></i></i></span></div>
 			<div class="space"></div>
 			<a href="#top" class="link"><div class="headerItems">Introduction</div></a>
 			<a href="#journey" class="link"><div class="headerItems">My Journey</div></a>
 			<a href="#me" class="link"><div class="headerItems">About Me</div></a>
 			<a href="#FAC" class="link"><div class="headerItems">Why FAC</div></a>
 			<div class="space"></div>
-			<div class="headerItems"><a href="https://github.com/JakePowis/JakePowis.github.io" target="_blank" class="icon"><i class="fab fa-github"></i></a></div>
-			<div class="headerItems"><a href="https://www.freecodecamp.org/jakepowis" target="_blank" class="icon"><i class="fab fa-free-code-camp"></i></a></div>
-			<div class="headerItems"><a href="https://www.codewars.com/users/JakeP." target="_blank" class="icon"><i class="fas fa-biohazard"></i></a></div>
-			<div class="headerItems"><a href="https://www.linkedin.com/in/jpowis/?originalSubdomain=uk" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a></div>
+			<div class="headerItems"><a href="https://github.com/JakePowis/JakePowis.github.io" target="_blank" class="icon tooltip"><i class="fab fa-github"><span class="tooltiptext"> GitHub </span></i></a></div>
+			<div class="headerItems"><a href="https://www.freecodecamp.org/jakepowis" target="_blank" class="icon tooltip"><i class="fab fa-free-code-camp"><span class="tooltiptext"> Free Code<br>Camp </span></i></a></div>
+			<div class="headerItems"><a href="https://www.codewars.com/users/JakeP." target="_blank" class="icon tooltip"><i class="fas fa-biohazard"><span class="tooltiptext"> Code <br>Wars </span></i></a></div>
+			<div class="headerItems"><a href="https://www.linkedin.com/in/jpowis/?originalSubdomain=uk" target="_blank" class="icon tooltip"><i class="fab fa-linkedin"><span class="tooltiptext"> LinkedIn </span></i></a></div>
 
 		</div>
 	
@@ -52,7 +54,7 @@
 		<div class="sectionContainer background1" id="background1"> 
 			<div class="textBox1">
 			
-						<h2> My Application to the FAC Spring 2020 Cohort </h2> 
+						<h2> My Application to the FAC Spring 2020 Cohort</h2> 
 						<p >Hello! My name is <b>Jake Powis</b> & iv'e recently entered start up land after leaving a nearly 10 year career in banking (most recently 3 years at <a href="https://www.svb.com/uk" style="color: darkorange">Silicon Valley Bank</a>) and am looking to join the spring cohort to get my (very limited) coding skills up to speed in order to support my ambition of pivoting my career into working with early stage tech companies - with the ultimate aspiration of founding & running a London based Fintech business! </p>
 						<br/>
 						<p> My goal from this programme and thereafter is therefore to develop strong coding skills, integrate myself into the developer community, build out my tech network, find a cool start up company to work with (most lilkey in fintech), and then eventually start building out my own start-up ideas (see <a href="#FAC" style="color:darkorange">FAC</a> section for more details). I'm also excited about the opportunity to contribute to the programme in the future and help support the education of all future cohorts to come.</p>
@@ -71,16 +73,18 @@
 		<div class="sectionContainer background2" id="background2"> 
 			<div class="textBox2">
 			
-			<div>
+			
 
 				<h2  align="center"> My Journey </h2> 
 
 				<div class="timeline" align="justify">
 				  <div class="container left">
-				    <div class="content" id="box1">
-				      <h3 align="center">THE EARLY YEARS<br/><i><small>pre-2009</i></small></h3>
-				      <p>I grew up in a entrepreneurial family on the South Coast of England, spent most of my youth playing bass guitar in bands and waay too many video games. I graduated from the university of Sussex in Brighton in 2009 with a 1st class hons degree in Economics (with some electives in Japanese language).</p>
+				    <div class="content"><button class="tlTitle"><h3 align="center">THE EARLY YEARS<br/><i><small>pre-2009</i></small></h3></i></button>
+					    <div class="tlText">
+					      <p>I grew up in a entrepreneurial family on the South Coast of England, spent most of my youth playing bass guitar in bands and waay too many video games. I graduated from the university of Sussex in Brighton in 2009 with a 1st class hons degree in Economics (with some electives in Japanese language).</p>
+					    </div>
 				    </div>
+				
 				  </div>
 				  <div class="container right">
 				    <div class="content" id="box2">
@@ -108,7 +112,7 @@
 				  </div>
 				 </div>				
 
-			</div>
+			
 	
 		</div>
 		<script type = "text/javascript" src="TimeLine.js"></script>

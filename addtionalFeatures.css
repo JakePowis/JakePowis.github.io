@@ -1,0 +1,181 @@
+
+
+/*###############################         TOOL TIPS (ICONS)         ################################*/
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 100px;
+	height: 30px;
+	background-color: #555;
+	font-weight: 700;
+	color: orange;
+	text-align: center;
+	border-radius: 6px;
+	z-index: 100;
+  	padding: 8% 2% 4% 2%;
+  	font-size: 10px;
+  	font-family: 'Lato', sans-serif;
+  	display: flex;
+  	align-content: center;
+  	align-items: center;
+  	justify-content: center;
+
+ }
+
+
+  .tooltip:hover .tooltiptext {
+  visibility: visible;
+   animation-name: ease-in;
+   animation-duration: 1.75s;
+}
+
+ @keyframes ease-in {
+    0% {
+      opacity: 0.0;
+    }
+      100% {
+      opacity: 1.0;
+    }
+}
+
+
+
+.tooltip .tooltiptext {
+position: absolute;
+  width: 70px;
+  top: 110%;
+  left: 50%;
+  margin-left: -35px; 
+ ;
+}
+
+
+/*###############################         POP UP BOX (NAME)        ################################*/
+
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 220px;
+  height: 110px;
+
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 92%;
+  left: 50%;
+  margin-left: -110px;
+
+  background-color: #555;
+  color: white;
+  font-size: 14px;
+  vertical-align: center; 
+  padding: 8% 8% 4% 8%;
+
+
+}
+
+.popup .show {
+  visibility: visible;
+  animation-name: ease-in;
+  animation-duration: 0.75s;
+}
+
+
+ @keyframes ease-in {
+    0% {
+      opacity: 0.0;
+    }
+      100% {
+      opacity: 1.0;
+    }
+}
+
+
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20%;
+  margin-left: -10px;
+  border-width: 7.5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 150px;
+  height: 75px;
+
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  left: 50%;
+  margin-left: -40px;
+
+  font-size: 11px;
+  padding: 8% 8% 4% 8%;
+ 
+
+
+}
+
+.popup .show {
+  visibility: visible;
+
+}
+
+}
+
+/*###############################         COLLAPSABLE BOXES (TIMELINE)        ################################*/
+
+
+
+.tlTitle {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+}
+
+
+.active, .tlTitle:hover {
+  background-color: #ccc;
+}
+
+.tlText {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+
+
+
