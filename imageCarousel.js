@@ -5,7 +5,7 @@
 //################################################################################
 
 
-const carouselSlide = document.querySelector(".carousel-slide") // the slide
+const carouselSlide =  document.querySelector(".carousel-slide") // the slide
 const carouselImages = document.querySelectorAll(".carousel-slide img"); // the images
 
 //counter
@@ -36,30 +36,36 @@ window.addEventListener("resize", ()=>{
 		
 })
 
-
-
-
-//Button listeners
-
-
-//when next button is clicked, move slide forward
-nextButton.addEventListener('click',()=>{
-	if(counter >= carouselImages.length-1) return; // in case of counter not resetting
+function moveForward() {
+if(counter >= carouselImages.length-1) return; // in case of counter not resetting
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
 	counter++; // add one to counter on click
 	updateValues();
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
+}
 
-})
 
-//when previous button is clicked, move slide back
-prevButton.addEventListener('click',()=>{
+
+function moveBack() {
 	if(counter <= 0) return; // in case of counter not restting
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
 	counter--; // add one to counter on click
 	updateValues();
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
+}
 
+
+//Button Listeners
+
+
+//when next button is clicked, move slide forward
+nextButton.addEventListener('click', ()=>{
+	moveForward()})
+	
+
+//when previous button is clicked, move slide back
+prevButton.addEventListener('click',()=>{
+	moveBack();
 })
 
 
@@ -87,15 +93,14 @@ carouselSlide.addEventListener("transitionend",()=>{ // if first slide (at end),
 })
 
 
-
-document.addEventListener('keypress',()=>{
-	if(counter >= carouselImages.length-1) return; // in case of counter not resetting
-	carouselSlide.style.transition = "transform 0.6s ease-in-out";
-	counter++; // add one to counter on click
-	updateValues();
-	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above - NOT WORKING
-
-})
+document.addEventListener("keydown", ()=>{ // move with arrow keys
+ 	if (event.keyCode == 39) {
+	 	moveForward();
+ }//end of if
+ 	if (event.keyCode == 37) {
+	 	moveBack();
+ }//end of if
+})//end func
 
 
 
@@ -139,10 +144,7 @@ function changeAutoText() { // experimenting with changing style direct via DOM,
 
 function autoPlaySlide() {
 	if(autoPlay == true){
-		carouselSlide.style.transition = "transform 0.6s ease-in-out";
-		counter++; // add one to counter on click
-		updateValues();
-		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+		moveForward();
 		setTimeout(autoPlaySlide, 2500);} // keep looping the function every 3 secs untill autoPlay is no longer true
 	else return; // breaks out of recurrsive loop once autoplay de-selected
 }//end func
