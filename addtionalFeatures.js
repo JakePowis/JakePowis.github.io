@@ -20,49 +20,49 @@ function popup() {
 
 
 
+const tlBtn = document.querySelector("#tlBtn");
+const tlBtn2 = document.querySelector("#tlBtn2");
+const tlBtn3 = document.querySelector("#tlBtn3");
+const tlBtn4 = document.querySelector("#tlBtn4");
+const tlBtn5 = document.querySelector("#tlBtn5");
 
-var coll = document.getElementsByClassName("tlTitle");
-var txt = document.getElementsByClassName("tlText");
-
-
-var i;
-
-console.log(coll);
-console.log(txt);
-
-console.log("check");
-
-coll.addEventListener("click", function() {
-    //this.classList.toggle("active");
-    console.log("check2");
-    //if (txt.style.display === "block") {
-     // txt.style.display = "none";
-   // } else {
-    //  txt.style.display = "block";
-    //}
-  });
+var txt = document.querySelector(".tlText");
+var txt2 = document.querySelector(".tlText2");
+var txt3 = document.querySelector(".tlText3");
+var txt4 = document.querySelector(".tlText4");
+var txt5 = document.querySelector(".tlText5");
 
 
-/*
+tlBtn.addEventListener('click', ()=>{
+  showText(tlBtn, txt);
+  })
+
+tlBtn2.addEventListener('click', ()=>{
+  showText(tlBtn2, txt2);
+  })
+
+tlBtn3.addEventListener('click', ()=>{
+  showText(tlBtn3, txt3);
+  })
+
+tlBtn4.addEventListener('click', ()=>{
+  showText(tlBtn4, txt4);
+  })
+
+tlBtn5.addEventListener('click', ()=>{
+  showText(tlBtn5, txt5);
+  })
 
 
-tlbtn.addEventListener('click',()=>{
-	  if (tltxt.style.display === "block") {
-      tltxt.style.display = "none";
-    } else {
-      tltxt.style.display = "block";
-    }
-});
+//how to make this work for all buttons?
 
-
- 
- /*
-
-function tlpop() {
-  var tlbtn = document.getElementById("tlText");
-  tlText.classList.toggle("display");
+function showText(btn, txt) {
+  btn.classList.toggle("active");
+  if (txt.style.display === "block") {
+  txt.style.display = "none";
+  } else {
+  txt.style.display = "block";
+  }
 }
-
- */
 
 

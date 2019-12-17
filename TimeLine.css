@@ -7,10 +7,11 @@
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
-  font-size: 8px;
+  font-size: 4px;
   background-color: inherit;
+
 
 }
 
@@ -18,13 +19,13 @@
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 4px;
   background-color: darkslategrey;
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
-  z-index: 1;
+
 }
 
 /* Container around content */
@@ -47,7 +48,7 @@
   border: 4px solid black;
   top: 15px;
   border-radius: 50%;
-  z-index: 30;
+  z-index: 90;
 }
 
 /* last circle only */
@@ -56,7 +57,6 @@
   position: relative;
   background-color: inherit;
   width: 50%;
-  z-index: 30;
 }
 
 /* last circle only*/
@@ -77,12 +77,16 @@
 .left {
   left: 0%;
   margin: 0% 0%;
+  background-color: inherit;
+  
 }
 
 /* Place the container to the right */
 .right {
-  left: 50%;
+  left: 50.0%;
   margin: 0% 0%;
+  background-color: inherit;
+  z-index: 10;
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -92,11 +96,11 @@
   position: absolute;
   top: 22px;
   width: 0;
-  z-index: 1;
+  z-index: 100;
   right: 30px;
-  border: medium solid darkgrey;
+  border: medium solid grey;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent darkgrey;
+  border-color: transparent transparent transparent grey;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -106,11 +110,11 @@
   position: absolute;
   top: 22px;
   width: 0;
-  z-index: 1;
+  z-index: 100;
   left: 30px;
-  border: medium solid darkgrey;
+  border: medium solid grey;
   border-width: 10px 10px 10px 0;
-  border-color: transparent darkgrey transparent transparent;
+  border-color: transparent grey transparent transparent;
 
 }
 
@@ -119,14 +123,6 @@
   left: -16px;
 }
 
-/* The actual content */
-.content {
-  padding: 15px 30px;
-  background-color: darkgrey;
-  position: relative;
-  border-radius: 6px;
-  opacity: 0.95;
-  font-size: 14px;}
 
 
 
