@@ -21,7 +21,7 @@ body {
     grid-template-columns: 0.7fr 2.7fr 1.7fr 2fr 2fr 2fr 2fr 1.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "icon name space link link link space icon icon icon icon";
     padding: 0px;
-    height: 70px;
+    height: 75px;
     width: 100%;
     font-size: 30px;
     left:0;
@@ -46,19 +46,42 @@ body {
 	background-color: inherit;
 	text-align: left;
 	font-size: 32px;
-	height: 68px;
+	height: 73px;
 	padding: 0% 0%;
 	display: flex;
    	align-items: center; !important
 
-
-
 }
+
 
 
 .name:hover {
 	color:orange;
+	animation-name: namemove;
+	animation-duration: 1.25s;
+
+
 }
+
+
+/*
+@keyframes namemove {
+  0% {
+  	margin-left: 0px}
+  50% {
+  	margin-left: 40px}
+  60% {
+  	margin-left: 0px}
+  75% {
+  	margin-left: 22px}
+  82% {
+  	margin-left: 0px}
+  95% {
+  	margin-left: 8px}
+  100% {
+  	margin-left: 0px}
+}
+*/
 
 .name:link {
 	background-color: inherit;
@@ -81,6 +104,38 @@ height: 45px;
 
 }
 
+#icon1:hover {
+animation-name: rotate;
+animation-duration: 0.5s;
+border-radius: 39%;
+background-color: orange;
+}
+
+
+@keyframes rotate {
+  
+0% {
+  	transform: rotate(0deg);}
+  12.5% {
+  		transform: rotate(45deg);}
+
+25%{
+  	transform: rotate(90deg);}
+  	  37.5% {
+  	transform: rotate(135deg)}
+  50% {
+  	transform: rotate(180deg)}
+    62.5% {
+  	transform: rotate(225deg)}
+  75% {
+  	transform: rotate(270deg)}
+   82.5% {
+  	transform: rotate(315deg)}
+  100% {
+  	transform: rotate(360deg)}
+}
+
+
 
 .space {
 	grid-area: "space";
@@ -93,7 +148,7 @@ height: 45px;
 .link {
 	grid-area: "link";
 	background-color: inherit;
-	height: 68px;
+	height: 73px;
 	font-size: 15px;
 	display: flex;
 	align-items: center;
@@ -150,6 +205,45 @@ height: 45px;
 
 .icon:hover {
 	color: orange;
+	animation: shake 1s;
+  	animation-iteration-count: infinite;
+}
+
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
  .headerBox {
@@ -169,9 +263,11 @@ height: 45px;
 	width: 90% auto;
 	border-radius: 100px;
 	text-align: center;
-	padding: 2% 2% 2% 2%;
+	padding: 1% 2% 2% 2%;
 	position: relative;
 }
+
+
 
 .textBox1 {
 
@@ -330,6 +426,19 @@ ul li {
    
   }
 
+    .ideaIcon {
+
+  	font-size: 50px;
+  	text-align: center;
+  	display: flex;
+  	align-content: center;
+  	justify-content: center;
+  	padding-top: 10%;
+ 
+
+
+  }
+
 
 .footer {
 
@@ -339,7 +448,7 @@ ul li {
     grid-template-columns: 1fr 1fr 5fr 4fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-areas: "space top space name space theme space email space";
     padding: 0px;
-    height: 40px;
+    height: 45px;
     width: 100%;
     font-size: 14px;
     opacity: 0.9;
@@ -415,6 +524,10 @@ ul li {
 	color: darkslategrey;
 
 
+}
+
+.finalSentance {
+	padding: 2% 8% 2% 0%;
 }
 
 
@@ -510,6 +623,8 @@ ul li {
     align-items: center;
     margin: 15px 18px 15px 0px;
   }
+
+
 
 
 .footer {
@@ -620,7 +735,7 @@ height: 30px
 
 .footer {
 
-    font-size: 8px;
+    font-size: 7px;
     text-align: center;
 
 }

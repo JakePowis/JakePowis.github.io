@@ -39,7 +39,7 @@
     grid-template-columns: 0.7fr 2.7fr 1.7fr 2fr 2fr 2fr 2fr 1.5fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "icon name space link link link space icon icon icon icon";
     padding: 0px;
-    height: 70px;
+    height: 75px;
     width: 100%;
     font-size: 30px;
     left:0;

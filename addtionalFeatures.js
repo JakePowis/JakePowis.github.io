@@ -50,8 +50,12 @@ tlBtn4.addEventListener('click', ()=>{
   })
 
 tlBtn5.addEventListener('click', ()=>{
-  showText(tlBtn5, txt5);
+  showText2(tlBtn5, txt5);
   })
+
+  showText(tlBtn, txt);
+  showText2(tlBtn5, txt5);
+
 
 
 //how to make this work for all buttons?
@@ -64,5 +68,15 @@ function showText(btn, txt) {
   txt.style.display = "block";
   }
 }
+
+function showText2(btn, txt) {
+  btn.classList.toggle("active2");
+  if (txt.style.display === "block") {
+  txt.style.display = "none";
+  } else {
+  txt.style.display = "block";
+  }
+}
+
 
 
