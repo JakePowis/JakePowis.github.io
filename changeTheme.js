@@ -1,4 +1,5 @@
 
+
 let count = 0;
 
 function changeClass(){ // swaps out starting class for new class on tagged elements (alternating based on odd/even count)
@@ -58,8 +59,6 @@ document.getElementById("footer").classList.add('footer');
 
 
 
-
-
 }//end else
 
 count++
@@ -71,14 +70,3 @@ count++
 window.onload = function(){
      document.getElementById("changeTheme").addEventListener( 'click', changeClass); // on clicking the change class element, change class function is run and classes switched.
     }
-
-
-
-//Change Element of a Class
-
-//function changeClassElement() {
-//  var cols = document.getElementsByClassName('sectionWrapper');
-// for(i = 0; i < cols.length; i++) {
-//    cols[i].style.backgroundColor = 'blue';
-// }
-//}

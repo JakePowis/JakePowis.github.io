@@ -62,19 +62,19 @@ tlBtn5.addEventListener('click', ()=>{
 
 function showText(btn, txt) {
   btn.classList.toggle("active");
-  if (txt.style.display === "block") {
-  txt.style.display = "none";
+    if (txt.style.maxHeight){
+      txt.style.maxHeight = null;
   } else {
-  txt.style.display = "block";
+  txt.style.maxHeight = txt.scrollHeight + "px";
   }
 }
 
 function showText2(btn, txt) {
   btn.classList.toggle("active2");
-  if (txt.style.display === "block") {
-  txt.style.display = "none";
+    if (txt.style.maxHeight){
+      txt.style.maxHeight = null;
   } else {
-  txt.style.display = "block";
+  txt.style.maxHeight = txt.scrollHeight + "px";
   }
 }
 

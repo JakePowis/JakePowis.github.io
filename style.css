@@ -247,18 +247,30 @@ background-color: orange;
 }
 
  .headerBox {
-    height: 60px;
+    height: 65px;
     background-color: white;
     padding: 0px;
     margin: 0px;
     width: 100%;
   }
 
+   .headerBoxAbsolute {
+    height: 65px;
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+  }
+
+
 
 .sectionContainer {
 
 	background-color: white;
-	margin: 2% 2% 2% 2%;
+	margin: 1.5% 1.2% 1.5% 1.2%;
 	height: 100%;
 	width: 90% auto;
 	border-radius: 100px;
@@ -281,6 +293,8 @@ background-color: orange;
 	padding: 2% 2% 3% 2%;
 	margin: 8% 10% 14% 10%;
 	flex-direction: column;
+	overflow: hidden;
+	position: relative;
 
 
 

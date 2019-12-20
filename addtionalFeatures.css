@@ -161,7 +161,7 @@ position: absolute;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 12px;
+  font-size: 14px;
   justify-content: center;
   position: relative;
 
@@ -180,6 +180,8 @@ position: absolute;
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
 }
+
+
 
 .active2 {
   background-color: skyblue !important;
@@ -204,19 +206,14 @@ position: absolute;
 
 .tlText, .tlText2, .tlText3, .tlText4, .tlText5 {
   padding: 0 18px;
+  background-color: white;
+  max-height: 0;
   overflow: hidden;
-  display: none;
+  transition: max-height 0.3s ease-out;
+  font-size: 14px;
   background-color: #f1f1f1;
-  justify-content: center;
-  font-size: 12px;
-  animation-name: ease-in;
-  animation-duration: 1s;
-  border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 2% 6% 4% 6%;
-  border-style: none;
-  border-width: 1px;
-  border-color:#555;
+  border-bottom-right-radius: 10px;
 
 }
 
@@ -256,17 +253,20 @@ position: absolute;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 6s steps(40, end),
+    typing 6s steps(35, end),
     blink-caret .75s step-end infinite;
   background-color: inherit;
   display:inline-block; 
   margin: 2% 2%;
+  animation-delay: 0s;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 65% }
+  0% { width: 0%}
+  25% { width: 16%}
+  50% { width: 16%}
+  100% { width: 55% }
 }
 
 /* The typewriter cursor effect */
@@ -277,29 +277,100 @@ position: absolute;
 
 
 
-.firstLine {
+.firstPara {
 
- 
+ animation-name: flyinLeft;
+ animation-duration:8s;
 
+}
+
+
+
+@keyframes flyinLeft {
+ 0% { transform: translateY(-1200%)}
+ 70% { transform: translateY(-1200%)}
+ 100% {transform: translateY(0%) }
+}
+
+
+.thankYou {
+
+ animation-name: flyinDown;
+ animation-duration: 9.5s;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ overflow:hidden;
+
+
+}
+
+
+@keyframes flyinDown {
+ 0% { transform: translateX(1200%)}
+ 70% { transform: translateX(1200%)}
+ 100% {transform: translateX(0%) }
+}
+
+
+.thankYou2 {
+
+ animation-name: fontChange;
+ animation-duration:11.0s;
+ color:#FF9F55;
+
+
+}
+
+@keyframes fontChange {
+ 0% {color:black; font-size: 14px; }
+ 80% {color: black; font-size: 16px; }
+ 100% {color: #FF9F55; font-size: 16px;}
+}
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+#typewriter  h2 {
+font-size: 14px;
+}
+
+}
+
+@media screen and (max-width: 400px) {
+
+#typewriter  h2 {
+font-size: 16px;
+animation-name: none;
+white-space: pre-wrap;
+border: none;
 }
 
 .firstPara {
 
- 
+ animation-name: none;
+
 
 }
 
-.secondPara {
-
-}
 
 .thankYou {
 
+ animation-name: none;
+
 
 }
 
+.thankYou2 {
+
+ animation-name: none;
 
 
+}
 
-
-
+}

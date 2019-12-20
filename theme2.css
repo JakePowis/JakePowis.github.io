@@ -80,7 +80,7 @@
     grid-template-columns: 1fr 1fr 5fr 4fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-areas: "space top space name space theme space email space";
     padding: 0px;
-    height: 40px;
+    height: 45px;
     width: 100%;
     font-size: 14px;
     opacity: 0.9;

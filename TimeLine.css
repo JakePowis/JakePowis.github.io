@@ -11,6 +11,7 @@
   margin: 0 auto;
   font-size: 4px;
   background-color: inherit;
+   z-index: 99;
 
 
 }
@@ -24,7 +25,8 @@
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -2px;
+  z-index: 99;
 
 }
 
@@ -48,7 +50,7 @@
   border: 4px solid black;
   top: 15px;
   border-radius: 50%;
-  z-index: 90;
+  z-index: 100;
 }
 
 /* last circle only */
@@ -70,14 +72,14 @@
   border: 4px solid black;
   top: 10px;
   border-radius: 50%;
-  z-index: 30;
+  z-index: 100;
 }
 
 /* Place the container to the left */
 .left {
   left: 0%;
   margin: 0% 0%;
-  background-color: inherit;
+  background-color: transparent;
   
 }
 
@@ -85,8 +87,7 @@
 .right {
   left: 50.0%;
   margin: 0% 0%;
-  background-color: inherit;
-  z-index: 10;
+  background-color: transparent;
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -102,6 +103,16 @@
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent grey;
 }
+
+
+.left:hover::before {
+  border-color: transparent transparent transparent orange;
+  }
+
+  .right:hover::before {
+  border-color: transparent orange transparent transparent;
+  }
+
 
 /* Add arrows to the right container (pointing left) */
 .right::before {
@@ -133,6 +144,7 @@
 /* Place the timelime to the left - where time line is */
   .timeline::after {
     left: 31px;
+    z-index: 99;
   }
 
 /* Full-width containers */
@@ -158,7 +170,7 @@
 
 /* Make sure that all arrows are pointing leftwards */
   .container2::before {
-    left: 60px;
+    left: 100px;
     border: darkgrey;
     border-width: 10px 10px 10px 0;
     border-color: transparent black transparent transparent;
