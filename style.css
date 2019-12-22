@@ -431,25 +431,48 @@ ul li {
   
 /* the actual boxes in a group*/
   #grid-1, #grid-2, #grid-3, #grid-4 {
-    padding: 2% 1.5%;
+    padding: 2% 2%;
     background-color: darkgrey;
     margin: 15px 15px;
     width: 100%;
     border-radius: 20px;
     border: 4px solid black;
-   
+    position: relative;
+
   }
+
+
+
 
     .ideaIcon {
 
-  	font-size: 50px;
+  	font-size: 60px;
   	text-align: center;
   	display: flex;
   	align-content: center;
   	justify-content: center;
   	padding-top: 10%;
- 
+  	position: absolute;
+  	bottom: 0%;
+  	right: 40%;
+  	padding: 5% 4%;
+  	background-color: inherit;
 
+  }
+
+
+    .ideaContainer {
+
+    	height: 70px;
+    	width: 70px;
+
+  }
+
+  .ideaHeading {
+
+  	  font-weight: bold;
+  	  display: flex;
+  	  justify-content: center;
 
   }
 
@@ -639,6 +662,23 @@ ul li {
   }
 
 
+    .ideaIcon {
+
+  	font-size: 40px;
+
+
+  }
+
+
+    .ideaContainer {
+
+    	height: 60px;
+    	width: 40px;
+
+  
+  }
+
+
 
 
 .footer {
@@ -683,7 +723,6 @@ ul li {
 	width: 100%;
 	font-size: 12px;
 
-
 }
 
 .textBox2 {
@@ -691,12 +730,7 @@ ul li {
 	margin: 3% 3% 3% 3%;
 	width: 100%;
 
-
-
-
 }
-
-
 
 .textBox3 {
 
@@ -708,13 +742,11 @@ ul li {
 
 
 
-
 .textBox4 {
 
 	margin: 5% 3% 5% 3%;
 	width: 100%;
 	padding: 4% 4% 4% 0%;
-
 
 
 }

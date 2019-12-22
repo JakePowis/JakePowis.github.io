@@ -217,6 +217,17 @@ position: absolute;
 
 }
 
+
+
+@media screen and (max-width: 1000px) {
+
+.tlText, .tlText2, .tlText3, .tlText4, .tlText5 {
+  font-size: 12px;
+}
+
+
+}
+
 #tlBtn:after, #tlBtn2:after,#tlBtn3:after,#tlBtn4:after,#tlBtn5:after {
   content: '';
   position: absolute !important;
@@ -279,17 +290,17 @@ position: absolute;
 
 .firstPara {
 
- animation-name: flyinLeft;
- animation-duration:8s;
+ animation-name: appear;
+ animation-duration:12s;
 
 }
 
 
 
-@keyframes flyinLeft {
- 0% { transform: translateY(-1200%)}
- 70% { transform: translateY(-1200%)}
- 100% {transform: translateY(0%) }
+@keyframes appear {
+ 0% { opacity: 0;}
+ 55% { opacity: 0;}
+ 100% {opacity: 1;}
 }
 
 
@@ -317,7 +328,7 @@ position: absolute;
 .thankYou2 {
 
  animation-name: fontChange;
- animation-duration:11.0s;
+ animation-duration:11.5s;
  color:#FF9F55;
 
 
@@ -325,7 +336,7 @@ position: absolute;
 
 @keyframes fontChange {
  0% {color:black; font-size: 14px; }
- 80% {color: black; font-size: 16px; }
+ 70% {color: black; font-size: 16px; }
  100% {color: #FF9F55; font-size: 16px;}
 }
 
