@@ -21,7 +21,27 @@
 }
 
 
-/* Add media query to resize carousel for mobile*/
+
+
+/* The dots/bullets/indicators */
+#dot1, #dot2, #dot3, #dot4, #dot5 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 4% 1%;
+  display: inline-block !important;
+  transition: background-color 0.6s ease;
+  z-index: 100;
+
+}
+
+.activeDot, #dot1:hover, #dot2:hover, #dot3:hover, #dot4:hover, #dot5:hover  {
+  background-color: #717171 !important;
+}
+
 
 
 

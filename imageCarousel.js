@@ -7,6 +7,8 @@
 
 const carouselSlide =  document.querySelector(".carousel-slide") // the slide
 const carouselImages = document.querySelectorAll(".carousel-slide img"); // the images
+const dots = document.querySelectorAll("dot"); // the dots
+let activeDott = "";
 
 //counter
 let counter = 1;
@@ -22,7 +24,18 @@ const nextButton = document.querySelector("#nextBtn");
 //Calculate Carousel Size
 
 updateValues();
-carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; 
+
+function slideSetup() {
+carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+console.log("set up done"); 
+}
+
+slideSetup();
+
+updateDots();
+
+setTimeout(slideSetup, 2500); // bug fix - if slow loading images, this will give time (2.5s) to load images and reset first image to align correctly in the case that it hasnt.
+
 
 //for resize
 
@@ -41,6 +54,7 @@ if(counter >= carouselImages.length-1) return; // in case of counter not resetti
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
 	counter++; // add one to counter on click
 	updateValues();
+	updateDots();
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
 }
 
@@ -51,6 +65,7 @@ function moveBack() {
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
 	counter--; // add one to counter on click
 	updateValues();
+	updateDots();
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
 }
 
@@ -149,6 +164,88 @@ function autoPlaySlide() {
 	else return; // breaks out of recurrsive loop once autoplay de-selected
 }//end func
 
+
+
+//#######################################################
+
+
+//DOTS
+
+//note: this 100% isnt the best way to do this - if i had more time this would be the first part of the code i'd like to streanmline using loops/toggles if i can work it out!
+
+
+function updateDots() {
+
+		switch(counter) {
+
+
+	  case 1:
+	    activeDott = "dot1";
+	    dot1.classList.add('activeDot');
+	    dot2.classList.remove('activeDot');
+	    dot3.classList.remove('activeDot');
+	    dot4.classList.remove('activeDot');
+	    dot5.classList.remove('activeDot');
+	    break;
+	  case 2:
+	    activeDott = "dot2";
+	    dot1.classList.remove('activeDot');
+	    dot2.classList.add('activeDot');
+	    dot3.classList.remove('activeDot');
+	    dot4.classList.remove('activeDot');
+	    dot5.classList.remove('activeDot');
+	    break;
+      case 3:
+	    activeDott = "dot3";
+	    dot1.classList.remove('activeDot');
+	    dot2.classList.remove('activeDot');
+	    dot3.classList.add('activeDot');
+	    dot4.classList.remove('activeDot');
+	    dot5.classList.remove('activeDot');
+	    break;
+      case 4:
+	    activeDott = "dot4";
+	    dot1.classList.remove('activeDot');
+	    dot2.classList.remove('activeDot');
+	    dot3.classList.remove('activeDot');
+	    dot4.classList.add('activeDot');
+	    dot5.classList.remove('activeDot');
+	    break;
+      case 5:
+    	activeDott = "dot5";
+    	dot1.classList.remove('activeDot');
+	    dot2.classList.remove('activeDot');
+	    dot3.classList.remove('activeDot');
+	    dot4.classList.remove('activeDot');
+	    dot5.classList.add('activeDot');
+	    break;
+	   case 6:
+    	activeDott = "dot1";
+    	dot1.classList.add('activeDot');
+	    dot2.classList.remove('activeDot');
+	    dot3.classList.remove('activeDot');
+	    dot4.classList.remove('activeDot');
+	    dot5.classList.remove('activeDot');
+	    break;
+	    case 0:
+    	activeDott = "dot1";
+    	dot1.classList.remove('activeDot');
+	    dot2.classList.remove('activeDot');
+	    dot3.classList.remove('activeDot');
+	    dot4.classList.remove('activeDot');
+	    dot5.classList.add('activeDot');
+	    break;
+	  default:
+
+		}
+
+
+
+}
+
+
+
+ 
 
 
 

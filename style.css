@@ -325,11 +325,23 @@ background-color: orange;
 	z-index: 80;
 	opacity: 0.87;
 	border-radius: 30px;
-	padding: 2% 4% 2% 2%;
-	margin: 6% 6% 10% 6%;
+	padding: 2% 2% 2% 2%;
+	margin: 6% 2% 6% 6%;
 	text-align: left;
 	grid-template-columns: 2.5fr 2fr;
 }
+
+.rightbox {
+
+
+	padding: 2% 2%;
+	margin: 6% 1% 2% 2%;
+	opacity: 1;
+	z-index: 100;
+	background-color: inherit;
+
+}
+
 
 #autoPlay {
 
@@ -368,12 +380,6 @@ background-color: orange;
 
 }
 
-.rightbox {
-
-	margin: 6% 2% 2% 2%;
-	opacity: 1;
-	z-index: 100;
-}
 
 .background1 {
 

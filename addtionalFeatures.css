@@ -264,7 +264,7 @@ position: absolute;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 6s steps(35, end),
+    typing 7s steps(60, end),
     blink-caret .75s step-end infinite;
   background-color: inherit;
   display:inline-block; 
@@ -275,9 +275,7 @@ position: absolute;
 /* The typing effect */
 @keyframes typing {
   0% { width: 0%}
-  25% { width: 16%}
-  50% { width: 16%}
-  100% { width: 55% }
+  100% { width: 100% }
 }
 
 /* The typewriter cursor effect */
@@ -287,11 +285,17 @@ position: absolute;
 }
 
 
+.typecontainer {
+  background-color: inherit;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
 
 .firstPara {
 
  animation-name: appear;
- animation-duration:12s;
+ animation-duration:13s;
 
 }
 
@@ -307,7 +311,7 @@ position: absolute;
 .thankYou {
 
  animation-name: flyinDown;
- animation-duration: 9.5s;
+ animation-duration:9.5s;
  width: 100%;
  height: 100%;
  margin: 0;
@@ -335,9 +339,9 @@ position: absolute;
 }
 
 @keyframes fontChange {
- 0% {color:black; font-size: 14px; }
- 70% {color: black; font-size: 16px; }
- 100% {color: #FF9F55; font-size: 16px;}
+ 0% {color:black;  }
+ 70% {color: black; }
+ 100% {color: #FF9F55; }
 }
 
 
