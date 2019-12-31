@@ -325,7 +325,7 @@ background-color: orange;
 	z-index: 80;
 	opacity: 0.87;
 	border-radius: 30px;
-	padding: 2% 2% 2% 2%;
+	padding: 2% 2% 1% 2%;
 	margin: 6% 2% 6% 6%;
 	text-align: left;
 	grid-template-columns: 2.5fr 2fr;
@@ -335,7 +335,7 @@ background-color: orange;
 
 
 	padding: 2% 2%;
-	margin: 6% 1% 2% 2%;
+	margin: 6% 1% 1% 2%;
 	opacity: 1;
 	z-index: 100;
 	background-color: inherit;
@@ -351,6 +351,7 @@ background-color: orange;
 	padding: 2% 2% 2% 2%;
 	border-radius: 20px;
 	font-size: 12px;
+	margin: 1% 1% 1% 1%;
 
 }
 

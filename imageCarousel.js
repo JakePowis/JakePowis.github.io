@@ -7,8 +7,7 @@
 
 const carouselSlide =  document.querySelector(".carousel-slide") // the slide
 const carouselImages = document.querySelectorAll(".carousel-slide img"); // the images
-const dots = document.querySelectorAll("dot"); // the dots
-let activeDott = "";
+
 
 //counter
 let counter = 1;
@@ -23,19 +22,19 @@ const nextButton = document.querySelector("#nextBtn");
 
 //Calculate Carousel Size
 
-updateValues();
 
 function slideSetup() {
 carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
 console.log("set up done"); 
 }
 
+updateValues();
 slideSetup();
-
 updateDots();
 
-setTimeout(slideSetup, 2500); // bug fix - if slow loading images, this will give time (2.5s) to load images and reset first image to align correctly in the case that it hasnt.
 
+setTimeout(updateValues, 4000); // bug fix - if slow loading images, this will give time (4.0s) to load images and reset first image to align correctly in the case that it hasnt.
+setTimeout(slideSetup, 4100); // bug fix
 
 //for resize
 
@@ -239,15 +238,70 @@ function updateDots() {
 
 		}
 
-
-
 }
 
 
+const clickdot1 = document.querySelector("#dot1"); // the dots
+const clickdot2 = document.querySelector("#dot2"); // the dots
+const clickdot3 = document.querySelector("#dot3"); // the dots
+const clickdot4 = document.querySelector("#dot4"); // the dots
+const clickdot5 = document.querySelector("#dot5"); // the dots
 
+
+clickdot1.addEventListener('click',()=>{
+	if( counter != 1){
+		counter = 1;
+		updateDots()
+		carouselSlide.style.transition = "transform 0.6s ease-in-out";
+		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
+	}
+	else return;
+})
+
+clickdot2.addEventListener('click',()=>{
+	if( counter != 2){
+		counter = 2;
+		updateDots()
+		carouselSlide.style.transition = "transform 0.6s ease-in-out";
+		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
+	}
+	else return;
+})
  
 
+ clickdot3.addEventListener('click',()=>{
+	if( counter != 3){
+		counter = 3;
+		updateDots()
+		carouselSlide.style.transition = "transform 0.6s ease-in-out";
+		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
+	}
+	else return;
+})
+ 
 
+ clickdot4.addEventListener('click',()=>{
+	if( counter != 4){
+		counter = 4;
+		updateDots()
+		carouselSlide.style.transition = "transform 0.6s ease-in-out";
+		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
+	}
+	else return;
+})
+ 
+
+ clickdot5.addEventListener('click',()=>{
+	if( counter != 5){
+		counter = 5;
+		updateDots()
+		carouselSlide.style.transition = "transform 0.6s ease-in-out";
+		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
+	}
+	else return;
+})
+ 
+ 
 
 
 
