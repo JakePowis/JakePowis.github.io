@@ -33,8 +33,8 @@ slideSetup();
 updateDots();
 
 
-setTimeout(updateValues, 4000); // bug fix - if slow loading images, this will give time (4.0s) to load images and reset first image to align correctly in the case that it hasnt.
-setTimeout(slideSetup, 4100); // bug fix
+setTimeout(updateValues, 4500); // bug fix - if slow loading images, this will give time (4.5s) to load images and reset first image to align correctly in the case that it hasnt.
+setTimeout(slideSetup, 4600); // bug fix
 
 //for resize
 
