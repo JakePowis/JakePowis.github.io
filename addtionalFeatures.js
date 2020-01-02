@@ -1,13 +1,6 @@
 
 
-/*###############################         POP UP BOX (NAME)        ################################*/
-
-//window.onload = function(){
- //    document.getElementById("name").addEventListener('click', popup())
- //}
-
-
-//cant seem to get it to work with an ID & event listener, so click command is in HTML.
+/*###############################         POP UP BOX (WHEN CLICK ON MY NAME)        ################################*/
 
 
 function popup() {
@@ -18,8 +11,7 @@ function popup() {
 
 /*###############################         COLLAPSABLE BOXES (TIMELINE)        ################################*/
 
-
-
+//setting out varibles for the time line boxes and hidden time line text boxes
 const tlBtn = document.querySelector("#tlBtn");
 const tlBtn2 = document.querySelector("#tlBtn2");
 const tlBtn3 = document.querySelector("#tlBtn3");
@@ -33,6 +25,7 @@ var txt4 = document.querySelector(".tlText4");
 var txt5 = document.querySelector(".tlText5");
 
 
+//Listeners for clicking the timeline boxes
 tlBtn.addEventListener('click', ()=>{
   showText(tlBtn, txt);
   })
@@ -53,27 +46,28 @@ tlBtn5.addEventListener('click', ()=>{
   showText2(tlBtn5, txt5);
   })
 
+//opens page with first and last box open
   showText(tlBtn, txt);
   showText2(tlBtn5, txt5);
 
-
-
-//how to make this work for all buttons?
-
+//function adds the active class to the box, then toggles maxheight up to show the hidden text
 function showText(btn, txt) {
   btn.classList.toggle("active");
-    if (txt.style.maxHeight){
+    if (txt.style.maxHeight) {
       txt.style.maxHeight = null;
-  } else {
+  } 
+  else {
   txt.style.maxHeight = txt.scrollHeight + "px";
   }
 }
 
+//as above, but for last timeline box only
 function showText2(btn, txt) {
   btn.classList.toggle("active2");
-    if (txt.style.maxHeight){
+    if (txt.style.maxHeight) {
       txt.style.maxHeight = null;
-  } else {
+  } 
+  else {
   txt.style.maxHeight = txt.scrollHeight + "px";
   }
 }

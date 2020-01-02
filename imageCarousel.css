@@ -10,7 +10,6 @@
 	font-size: 40px;
 	color: orange;
     text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
-
 }
 
 /* the image */
@@ -21,20 +20,18 @@
 }
 
 
-
-
 /* The dots/bullets/indicators */
 #dot1, #dot2, #dot3, #dot4, #dot5 {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  margin: 4% 1% 1% 1%;
-  display: inline-block !important;
-  transition: background-color 0.6s ease;
-  z-index: 100;
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	margin: 4% 1% 1% 1%;
+	display: inline-block !important;
+	transition: background-color 0.6s ease;
+	z-index: 100;
 
 }
 
@@ -42,13 +39,8 @@
   background-color: #717171 !important;
 }
 
-
-
-
 /* next and previous buttons*/
 #nextBtn {
-
-
 	position: absolute;
 	bottom: 4%;
 	right: 4%;
@@ -57,7 +49,6 @@
 }
 
 #prevBtn {
-	
 	position: absolute;
 	bottom: 4%;
 	left: 4%;
@@ -66,47 +57,34 @@
 }
 
 img.resize {
-  width:410px;
-  height:410px;
+  	width:410px;
+  	height:410px;
 }
 
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 800px) {
 
-/* CODE TO MAKE IMAGE APPEAR BELOW TEXT ON SMALL SCREEN */
-
-
-		img.resize {
-  		width:340px;
-  		height:340px;
+img.resize {
+  	width:340px;
+  	height:340px;
 	}
 
-	.carousel-container {
-		width: 340px;
-		height: 340px;
-		border: 4px solid black;
-		margin: 2% 10% 2% 0%;
-
-		position: relative;
-		font-size: 35px;
-
-
+.carousel-container {
+	width: 340px;
+	height: 340px;
+	border: 4px solid black;
+	margin: 2% 10% 2% 0%;
+	position: relative;
+	font-size: 35px;
 	}
 
 	/* the image */
-	.carousel-slide {
-		height: 340px;
-		width: auto;
-		position: absolute;
-
-
+.carousel-slide {
+	height: 340px;
+	width: auto;
+	position: absolute;
 	}
-
-
-
-
-
 
 }
 
@@ -117,35 +95,25 @@ img.resize {
 /* Media queries - Responsive timeline on screens less than 400px wide */
 @media screen and (max-width: 400px) {
 
+img.resize {
+	width:250px;
+	height:250px;
+}
 
-	img.resize {
-  		width:250px;
-  		height:250px;
+.carousel-container {
+	width: 250px;
+	height: 250px;
+	border: 4px solid black;
+	margin: 2% 10% 2% 0%;
+	position: relative;
+	font-size: 35px;
+}
+
+/* the image */
+.carousel-slide {
+	height: 250px;
+	width: auto;
+	position: absolute;
 	}
-
-
-
-	.carousel-container {
-		width: 250px;
-		height: 250px;
-		border: 4px solid black;
-		margin: 2% 10% 2% 0%;
-
-		position: relative;
-		font-size: 35px;
-
-
-	}
-
-	/* the image */
-	.carousel-slide {
-		height: 250px;
-		width: auto;
-		position: absolute;
-
-
-	}
-
-
 
 }

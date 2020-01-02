@@ -1,9 +1,8 @@
 
-//NORMAL CAROUSEL
+//IMAGE CAROUSEL
 
 
 //################################################################################
-
 
 const carouselSlide =  document.querySelector(".carousel-slide") // the slide
 const carouselImages = document.querySelectorAll(".carousel-slide img"); // the images
@@ -14,40 +13,43 @@ let counter = 1;
 let size = "";
 
 
-
 //Buttons
 const prevButton = document.querySelector("#prevBtn");
 const nextButton = document.querySelector("#nextBtn");
 
 
-//Calculate Carousel Size
-
+//Calculate Carousel Size (and move to correct starting position, ie index 1)
 
 function slideSetup() {
 carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
 console.log("set up done"); 
 }
 
-updateValues();
-slideSetup();
-updateDots();
-
-
-setTimeout(updateValues, 4500); // bug fix - if slow loading images, this will give time (4.5s) to load images and reset first image to align correctly in the case that it hasnt.
-setTimeout(slideSetup, 4600); // bug fix
-
-//for resize
+//Image Resize (re-checks if image size has changed (which will happen based on screen size), then applies new size values to movement)
 
 function updateValues() 
 	{size = carouselImages[0].clientWidth;}
 
+
+//set up functions on load of page
+updateValues();
+slideSetup();
+updateDots();
+
+//bug fix if does not load correctly (i.e images slow to load and therefore element has no size) - re sets up images after 4.5s to ensure images are loaded by this time
+setTimeout(updateValues, 4500); // bug fix 
+setTimeout(slideSetup, 4600); // bug fix
+
+
+//Re-fits current image to container on change of window size
 window.addEventListener("resize", ()=>{
-		updateValues();
-		carouselSlide.style.transition = "none";
-		carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; 
-		
+	updateValues();
+	carouselSlide.style.transition = "none";
+	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; 	
 })
 
+
+//Move Carousel forward one image
 function moveForward() {
 if(counter >= carouselImages.length-1) return; // in case of counter not resetting
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
@@ -57,8 +59,7 @@ if(counter >= carouselImages.length-1) return; // in case of counter not resetti
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)"; // move slide to the left as above 
 }
 
-
-
+//Move Carousel back one image
 function moveBack() {
 	if(counter <= 0) return; // in case of counter not restting
 	carouselSlide.style.transition = "transform 0.6s ease-in-out";
@@ -71,11 +72,9 @@ function moveBack() {
 
 //Button Listeners
 
-
 //when next button is clicked, move slide forward
 nextButton.addEventListener('click', ()=>{
 	moveForward()})
-	
 
 //when previous button is clicked, move slide back
 prevButton.addEventListener('click',()=>{
@@ -83,7 +82,7 @@ prevButton.addEventListener('click',()=>{
 })
 
 
-//for when at at of slideshow, reset to start
+//for when at end of slideshow, reset to start secretly
 carouselSlide.addEventListener("transitionend",()=>{ // if last slide (at start), skip back to first
 	if (carouselImages[counter].id === "last-clone") {
 	carouselSlide.style.transition = "none";
@@ -94,8 +93,7 @@ carouselSlide.addEventListener("transitionend",()=>{ // if last slide (at start)
 
 })
 
-
-//for when at start of slideshow, skip to last
+//for when at start of slideshow, skip to last secretly
 carouselSlide.addEventListener("transitionend",()=>{ // if first slide (at end), skip back to last
 	if (carouselImages[counter].id === "first-clone") {
 	carouselSlide.style.transition = "none";
@@ -103,11 +101,11 @@ carouselSlide.addEventListener("transitionend",()=>{ // if first slide (at end),
 	updateValues();
 	carouselSlide.style.transform = "translateX(" + (-size * counter) + "px)";
 	}
-
 })
 
 
-document.addEventListener("keydown", ()=>{ // move with arrow keys
+// move Carousel with left/right arrow keys
+document.addEventListener("keydown", ()=>{ 
  	if (event.keyCode == 39) {
 	 	moveForward();
  }//end of if
@@ -117,10 +115,7 @@ document.addEventListener("keydown", ()=>{ // move with arrow keys
 })//end func
 
 
-
-
 //#######################################################
-
 
 //AUTOPLAY
 
@@ -132,9 +127,7 @@ autoButton.addEventListener('click',()=>{
 	if (autoPlay == false) autoPlay = true; // sets to true on first click
 	else autoPlay = false; // then sets to false
 	autoPlaySlide(); // runs autoplay function on click
-	changeAutoText(); // runs change text function on click
-
-         
+	changeAutoText(); // runs change text function on click  
 });//end func
 
 
@@ -145,16 +138,14 @@ function changeAutoText() { // experimenting with changing style direct via DOM,
 	autoText.style.color = "black";
 	autoText.style.opacity = 1;
 	autoText.style.background = "lightgrey";
-
-  } else {
+  } 
+  else {
     autoText.innerHTML = "Autoplay: Off"; //changes text to "off" if "on"
     autoText.style.color = "darkgrey";
     autoText.style.opacity = 0.7;
     autoText.style.background = "inherit";
   }
 }
-
-
 
 function autoPlaySlide() {
 	if(autoPlay == true){
@@ -176,7 +167,6 @@ function autoPlaySlide() {
 function updateDots() {
 
 		switch(counter) {
-
 
 	  case 1:
 	    activeDott = "dot1";
@@ -237,9 +227,7 @@ function updateDots() {
 	  default:
 
 		}
-
 }
-
 
 const clickdot1 = document.querySelector("#dot1"); // the dots
 const clickdot2 = document.querySelector("#dot2"); // the dots
@@ -268,7 +256,6 @@ clickdot2.addEventListener('click',()=>{
 	else return;
 })
  
-
  clickdot3.addEventListener('click',()=>{
 	if( counter != 3){
 		counter = 3;
@@ -279,7 +266,6 @@ clickdot2.addEventListener('click',()=>{
 	else return;
 })
  
-
  clickdot4.addEventListener('click',()=>{
 	if( counter != 4){
 		counter = 4;
@@ -290,7 +276,6 @@ clickdot2.addEventListener('click',()=>{
 	else return;
 })
  
-
  clickdot5.addEventListener('click',()=>{
 	if( counter != 5){
 		counter = 5;

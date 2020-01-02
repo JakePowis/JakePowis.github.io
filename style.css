@@ -1,19 +1,13 @@
 * {
 box-sizing: border-box;
-
 }
 
 body {
-
 	background-color: darkgrey;
 	font-family: 'Lato', sans-serif;
 }
 
-
-
-
 .headerWrapper {
-
     position: fixed;
     background-color: white;
     color: black;
@@ -40,7 +34,6 @@ body {
 	background-color: inherit;
  }
 
-
 .name {
 	grid-area: "name";
 	background-color: inherit;
@@ -53,16 +46,11 @@ body {
 
 }
 
-
-
 .name:hover {
 	color:orange;
 	animation-name: namemove;
 	animation-duration: 1.25s;
-
-
 }
-
 
 /*
 @keyframes namemove {
@@ -87,7 +75,6 @@ body {
 	background-color: inherit;
 	color: inherit;
 	text-decoration: none;
-
 }
 
 .name:visited {
@@ -98,44 +85,28 @@ body {
 }
 
 #icon1 {
-
-width: 45px;
-height: 45px;
-
+	width: 45px;
+	height: 45px;
 }
 
 #icon1:hover {
-animation-name: rotate;
-animation-duration: 0.5s;
-border-radius: 39%;
-background-color: orange;
+	animation-name: rotate;
+	animation-duration: 0.5s;
+	border-radius: 39%;
+	background-color: orange;
 }
-
 
 @keyframes rotate {
-  
-0% {
-  	transform: rotate(0deg);}
-  12.5% {
-  		transform: rotate(45deg);}
-
-25%{
-  	transform: rotate(90deg);}
-  	  37.5% {
-  	transform: rotate(135deg)}
-  50% {
-  	transform: rotate(180deg)}
-    62.5% {
-  	transform: rotate(225deg)}
-  75% {
-  	transform: rotate(270deg)}
-   82.5% {
-  	transform: rotate(315deg)}
-  100% {
-  	transform: rotate(360deg)}
+0% 		{transform: rotate(0deg);}
+12.5% 	{transform: rotate(45deg);}
+25%		{transform: rotate(90deg);}
+37.5% 	{transform: rotate(135deg)}
+50% 	{transform: rotate(180deg)}
+62.5% 	{transform: rotate(225deg)}
+75% 	{transform: rotate(270deg)}
+82.5% 	{transform: rotate(315deg)}
+100% 	{transform: rotate(360deg)}
 }
-
-
 
 .space {
 	grid-area: "space";
@@ -156,6 +127,7 @@ background-color: orange;
 	padding: 3% 2% 2% 2%;
 	text-decoration: none;
 	margin: 0% 0%;
+	transition: 0.1s;
 }
 
 .link:link {
@@ -186,14 +158,12 @@ background-color: orange;
 	align-items: center;
 	justify-content: center;
 	padding: 2% 2%;
-
 }
 
 .icon:link {
 	background-color: inherit;
 	color: inherit;
 	text-decoration: none;
-
 }
 
 .icon:visited {
@@ -211,39 +181,39 @@ background-color: orange;
 
 
 @keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
+	  0% {
+	    transform: translate(1px, 1px) rotate(0deg);
+	  }
+	  10% {
+	    transform: translate(-1px, -2px) rotate(-1deg);
+	  }
+	  20% {
+	    transform: translate(-3px, 0px) rotate(1deg);
+	  }
+	  30% {
+	    transform: translate(3px, 2px) rotate(0deg);
+	  }
+	  40% {
+	    transform: translate(1px, -1px) rotate(1deg);
+	  }
+	  50% {
+	    transform: translate(-1px, 2px) rotate(-1deg);
+	  }
+	  60% {
+	    transform: translate(-3px, 1px) rotate(0deg);
+	  }
+	  70% {
+	    transform: translate(3px, 1px) rotate(-1deg);
+	  }
+	  80% {
+	    transform: translate(-1px, -1px) rotate(1deg);
+	  }
+	  90% {
+	    transform: translate(1px, 2px) rotate(0deg);
+	  }
+	  100% {
+	    transform: translate(1px, -2px) rotate(-1deg);
+	  }
 }
 
  .headerBox {
@@ -254,7 +224,7 @@ background-color: orange;
     width: 100%;
   }
 
-   .headerBoxAbsolute {
+ .headerBoxAbsolute {
     height: 65px;
     background-color: white;
     padding: 0px;
@@ -265,10 +235,7 @@ background-color: orange;
     left:0;
   }
 
-
-
 .sectionContainer {
-
 	background-color: white;
 	margin: 1.5% 1.2% 1.5% 1.2%;
 	height: 100%;
@@ -279,10 +246,7 @@ background-color: orange;
 	position: relative;
 }
 
-
-
 .textBox1 {
-
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -295,13 +259,9 @@ background-color: orange;
 	flex-direction: column;
 	overflow: hidden;
 	position: relative;
-
-
-
 }
 
 .textBox2 {
-
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -312,12 +272,9 @@ background-color: orange;
 	padding: 2% 2% 3% 2%;
 	margin: 6% 10% 4% 10%;
 	flex-direction: column;
-
-
 }
 
 .textBox3 {
-
 	height: 100%;
 	width: 100%;
 	display: grid;
@@ -332,19 +289,15 @@ background-color: orange;
 }
 
 .rightbox {
-
-
 	padding: 2% 2%;
 	margin: 6% 1% 1% 2%;
 	opacity: 1;
 	z-index: 100;
 	background-color: inherit;
-
 }
 
 
 #autoPlay {
-
 	color:grey;
 	opacity: 0.7;
 	border: 2px solid grey;
@@ -352,21 +305,14 @@ background-color: orange;
 	border-radius: 20px;
 	font-size: 12px;
 	margin: 1% 1% 1% 1%;
-
 }
 
 #autoPlay:hover {
-
 	color:black;
-
 }
 
 
-
-
-
 .textBox4 {
-
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -378,47 +324,39 @@ background-color: orange;
 	margin: 4% 4% 4% 4%;
 	flex-direction: column;
 	text-align: left;
-
 }
 
-
 .background1 {
-
-	    background-image: url("./Images/image3.jpg");
-	    display: flex;
-	    position: relative;
-        background-size: cover; 
+	background-image: url("./Images/image3.jpg");
+	display: flex;
+	position: relative;
+    background-size: cover; 
 }
 
 .background2 {
-
-	    background-image: url("./Images/image4.jpg");
-	    display: flex;
-	    position: relative;
-        background-size: cover; 
+	background-image: url("./Images/image4.jpg");
+	display: flex;
+	position: relative;
+    background-size: cover; 
 }
 
 .background3 {
-
-	    background-image: url("./Images/image2.jpg");
-	    display: flex;
-	    position: relative;
-        background-size: cover; 
+	background-image: url("./Images/image2.jpg");
+	display: flex;
+	position: relative;
+    background-size: cover; 
 }
 
 .background4 {
-
-	    background-image: url("./Images/image1.jpg");
-	    display: flex;
-	    position: relative;
-        background-size: cover; 
+	background-image: url("./Images/image1.jpg");
+	display: flex;
+	position: relative;
+    background-size: cover; 
 }
 
- .highlight{
-
-	  	font-weight: bold;
-	  	color: #FF9F55; 
-
+.highlight{
+	font-weight: bold;
+	color: #FF9F55; 
   	}
 
 
@@ -426,9 +364,7 @@ ul li {
     padding: 4px 0px;
 }
 
-
-/* boxes at bottom for start up ideas container*/
-  #grid-container {
+#grid-container {
     background-color: white;
     display: flex;
     height: 100%;
@@ -436,8 +372,7 @@ ul li {
     flex-direction: row;
   }
   
-/* the actual boxes in a group*/
-  #grid-1, #grid-2, #grid-3, #grid-4 {
+#grid-1, #grid-2, #grid-3, #grid-4 {
     padding: 2% 2%;
     background-color: darkgrey;
     margin: 15px 15px;
@@ -448,11 +383,7 @@ ul li {
 
   }
 
-
-
-
-    .ideaIcon {
-
+.ideaIcon {
   	font-size: 60px;
   	text-align: center;
   	display: flex;
@@ -464,28 +395,20 @@ ul li {
   	right: 40%;
   	padding: 5% 4%;
   	background-color: inherit;
-
   }
 
-
-    .ideaContainer {
-
-    	height: 70px;
-    	width: 70px;
-
+.ideaContainer {
+   	height: 70px;
+    width: 70px;
   }
 
   .ideaHeading {
-
-  	  font-weight: bold;
-  	  display: flex;
-  	  justify-content: center;
-
+  	font-weight: bold;
+  	display: flex;
+  	justify-content: center;
   }
 
-
 .footer {
-
     background-color: white;
     color: black;
     display: grid;
@@ -509,14 +432,12 @@ ul li {
 	background-color: inherit;
 	color: inherit;
 	text-decoration: none;
-
 }
 
 .footer:visited {
 	background-color: inherit;
 	color: inherit;
 	text-decoration: none;
-
 }
 
 .topIcon {
@@ -533,7 +454,6 @@ ul li {
 	background-color: inherit;
 	color: inherit;
 	text-decoration: none;
-
 }
 
 .topIcon:visited {
@@ -545,12 +465,9 @@ ul li {
 
 .topIcon:hover {
 	color: orange;
-
 }
 
-
 .changeTheme {
-
 	background-color: orange;
 	color: white;
 	font-weight: bold;
@@ -559,15 +476,10 @@ ul li {
 	align-items: center;
 	justify-content: center;
 	padding: 2% 2% 2% 2%;
-
-
 }
 
 .changeTheme:hover {
-
 	color: darkslategrey;
-
-
 }
 
 .finalSentance {
@@ -576,35 +488,23 @@ ul li {
 
 
 
-
-/* ##########################################################################################################################*/
-
+/* ##########################################    MEDIA RESPONSIVNESS  1000px  ################################################################################*/
 
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 1000px) {
 
-/* CODE TO MAKE IMAGE APPEAR BELOW TEXT ON SMALL SCREEN */
-
-
 .textBox1 {
-
 	font-size: 14px;
 	margin: 4% 8% 10% 8%;
 }
 
 .textBox2 {
-
-
 	padding: 2% 2% 3% 2%;
 	margin: 6% 6% 6% 6%;
-
 }
 
-
-
 .textBox3 {
-
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -618,28 +518,22 @@ ul li {
 	font-size: 12px;
 	text-align: justify;
 	align-items: center;
-
 }
 
-
 .right {
-
 	margin: 6% 2% 2% 2%;
 	opacity: 0.99;
 	z-index: 100;
 }
 
-
 .icon {
 	font-size: 28px;
-
 }
 
 .link {
 	font-size: 11px;
 	align-items: center;
 	text-align: center;
-
 }
 
 .name {
@@ -648,51 +542,34 @@ ul li {
 	align-items: center;
 	text-align: left;
 	padding: 0% 0% 0% 0%;
-
 }
 
-
-
 .textBox4 {
-
 	padding: 2% 4% 3% 0%;
 	margin: 8% 6% 6% 6%;
 	font-size: 12px;
 }
 
 
-  #grid-container {
+#grid-container {
     flex-direction: column;
     font-size: 12px;
     align-items: center;
     margin: 15px 18px 15px 0px;
-  }
+ }
 
-
-    .ideaIcon {
-
+.ideaIcon {
   	font-size: 40px;
-
-
   }
 
-
-    .ideaContainer {
-
-    	height: 60px;
-    	width: 40px;
-
-  
+.ideaContainer {
+    height: 60px;
+    width: 40px;
   }
-
-
-
 
 .footer {
-
     font-size: 10px;
     text-align: center;
- 
 }
 
 
@@ -703,7 +580,7 @@ ul li {
 
 
 
-/* ##########################################################################################################################*/
+/* ##########################################    MEDIA RESPONSIVNESS  450px  ################################################################################*/
 
 
 
@@ -712,56 +589,39 @@ ul li {
 
 
 .sectionContainer {
-
-
 	margin: 0% 0% 1% 0%;
 	height: 100%;
 	width: 100% auto;
 	border-radius: 2px;
-
 	padding: 0% 0% 0% 0%;
-
 }
 
-
 .textBox1 {
-
 	margin: 10% 3% 12% 3%;
 	width: 100%;
 	font-size: 12px;
-
 }
 
 .textBox2 {
-
 	margin: 3% 3% 3% 3%;
 	width: 100%;
-
 }
 
 .textBox3 {
-
 	margin: 2% 2% 2% 2%;
 	width: 100%;
 	padding: 4% 6%;
-
 }
 
-
-
 .textBox4 {
-
 	margin: 5% 3% 5% 3%;
 	width: 100%;
 	padding: 4% 4% 4% 0%;
-
-
 }
 
 .icon {
 	font-size: 24px;
 	padding: 6% 6% 6% 6%;
-
 }
 
 .link {
@@ -769,7 +629,6 @@ ul li {
 	display: flex;
 	align-items: center;
 	text-align: center;
-
 }
 
 .name {
@@ -781,16 +640,13 @@ ul li {
 }
 
 #icon1 {
-
-width: 30px;
-height: 30px
+	width: 30px;
+	height: 30px
 }
 
 .footer {
-
     font-size: 7px;
     text-align: center;
-
 }
 
 .topIcon {
@@ -798,9 +654,7 @@ height: 30px
 
 }
 
-
-
-
+}
 
 /* ##########################################################################################################################*/
 

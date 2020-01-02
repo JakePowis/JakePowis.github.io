@@ -1,10 +1,9 @@
 
-
 let count = 0;
 
-function changeClass(){ // swaps out starting class for new class on tagged elements (alternating based on odd/even count)
+function changeClass() { // swaps out starting class for new class on tagged elements (alternating based on odd/even count)
 
-if(count % 2 == 0){
+if(count % 2 == 0) {
 
 document.getElementById("background1").classList.remove('background1');
 document.getElementById("background1").classList.add('background1a');
@@ -26,8 +25,6 @@ document.getElementById("changeTheme").classList.add('changeTheme2');
 
 document.getElementById("footer").classList.remove('footer');
 document.getElementById("footer").classList.add('footer2');
-
-
 
 }
 
@@ -55,9 +52,7 @@ document.getElementById("footer").classList.remove('footer2');
 document.getElementById("footer").classList.add('footer');
 
 
-//WAY TO CHANGE ClASS ELEMETS SUCH AS BACKGROUND COLOR OF TEXTBOXS?
-
-
+//TO DO - easier way to do this with toggle class?
 
 }//end else
 
@@ -65,8 +60,7 @@ count++
 
 } //end func
 
-
 //Change Class given an ID
-window.onload = function(){
+window.onload = function() {
      document.getElementById("changeTheme").addEventListener( 'click', changeClass); // on clicking the change class element, change class function is run and classes switched.
     }
